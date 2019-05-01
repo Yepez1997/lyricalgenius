@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const HeaderMainNav = () => (
+const HeaderMainNav = (props) => (
   //TODO: ADD TO CHANGE
   <header className="genius-header">
     <div className="search-input">
@@ -13,10 +13,12 @@ const HeaderMainNav = () => (
       </Link>
     </div>
     <div className="user-buttons">
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Sign up</Link>
+      <button className="modal-button" onClick={() => props.modal("login")}>Login</button>
+      <button className="modal-button" onClick={() => props.modal("signup")}>Signup</button>
     </div>
   </header>
 );
+// need to get make a container to have access to state 
+// and get the modal function 
 
 export default HeaderMainNav;

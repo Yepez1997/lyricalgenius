@@ -56,12 +56,15 @@ small {
 .user-buttons {
     display: flex;
     padding: .75rem .5rem 0;
-    font-size: 12px;
+    font-size: 14px;
     align-items: center;
+    font-family: Programme, sans-serif;
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
     text-align: center;
+    position: relative;
+    bottom: 5px;
 }
 
 .user-buttons>a {
@@ -69,6 +72,7 @@ small {
     color: black;
     padding: 10px 15px;
     text-decoration: none;
+    font-family: Programme, sans-serif;
     border-bottom: 3px solid transparent;
 }
 
@@ -191,10 +195,6 @@ ul>li {
 }
 
 
-/* .verified-artist {
-    display: block;
-} */
-
 .verified-artist>li:hover {
     color: #ffff64;
 }
@@ -216,4 +216,16 @@ ul>li {
 
 .artist-letters>li:hover {
     color: #ffff64;
+}
+
+/* buttons */
+.modal-button {
+    padding: 5px;
+}
+
+
+.modal-button:hover {
+    cursor: pointer;
+    border-bottom: 10px solid #ff1464; /* or whatever colour you'd prefer */
+    margin: 5px;
 }
