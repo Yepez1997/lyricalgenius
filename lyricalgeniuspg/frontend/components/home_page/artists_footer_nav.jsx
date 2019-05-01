@@ -1,5 +1,5 @@
 import React from "react";
-
+// FIXME: WORK ON drying
 const ArtistsFooterNav = () => (
     <>
     <footer className="footer">

@@ -23,9 +23,6 @@ const App = () => (
         <header>
             <HeaderMainNav/>
             <HeaderInfoNav/>
-            <Link to="/" className="header-link">
-                <h1>Genius</h1>
-            </Link>
             <GreetingContainer />
             <ArtistsFooterNav/>
         </header>
