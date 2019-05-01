@@ -173,6 +173,7 @@ small {
     color: #99a7ee;
     flex-wrap: wrap;
     padding: 10px;
+    min-height: 38px;
 }
 
 .footer-artists-links {

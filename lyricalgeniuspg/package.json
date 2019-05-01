@@ -31,5 +31,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "style-loader": "^0.23.1"
+  }
 }
