@@ -170,9 +170,14 @@ small {
 .artists-footer {
     display: flex;
     justify-content: center;
-    flex-direction: row;
     color: #99a7ee;
     flex-wrap: wrap;
+    padding: 5px;
+}
+
+.footer-artists-links {
+    display: flex;
+    flex-direction: column;
 }
 
 .artist-letters {
@@ -199,6 +204,7 @@ ul>li {
 
 .all-artists {
     color: #ccc;
+    display: inline;
 }
 
 .artist-letters>li {
