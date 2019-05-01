@@ -1,0 +1,79 @@
+/*  footers  */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: Programme, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffff64;
+    background: black;
+    min-height: 38px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.footer-links>li:hover {
+    color: #99a7ee;
+    cursor: pointer;
+}
+
+
+/* footers part 2 */
+
+.artists-footer {
+    display: flex;
+    justify-content: center;
+    color: #99a7ee;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.footer-artists-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-letters {
+    display: flex;
+}
+
+ul>li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+
+/* .verified-artist {
+    display: block;
+} */
+
+.verified-artist>li:hover {
+    color: #ffff64;
+}
+
+.verified-artist>li {
+    list-style-type: none;
+}
+
+.all-artists {
+    color: #ccc;
+    display: inline;
+}
+
+.artist-letters>li {
+    list-style-type: none;
+    padding: .5rem;
+    margin: auto;
+}
+
+.artist-letters>li:hover {
+    color: #ffff64;
+}
