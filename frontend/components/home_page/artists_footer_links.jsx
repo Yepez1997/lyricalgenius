@@ -1,19 +1,7 @@
-import React from "react";
-// FIXME: REFRACTOR CODE 
-const ArtistsFooterNav = () => (
-    <>
-    <footer className="footer">
-        <footer className="footer-info">
-            <ul className="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Devlopers</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Copyright Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
-            </ul>
-        </footer>
-        <footer className="artists-footer">
+import react from 'react';
+
+const ArtistFooterLinks = () => (
+     <footer className="artists-footer">
             <ul className="footer-artist-links">
                 <div className="verified-artist">
                 <li><a href="#">Verified Artists</a></li>
@@ -51,8 +39,6 @@ const ArtistsFooterNav = () => (
                 </div>
             </ul>
         </footer>
-    </footer>
-  </>
 );
 
-export default ArtistsFooterNav;
+export default ArtistFooterLinks;

@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
     this.props.closeModal();
   }
-
+ // want to clear errors here ? 
   renderErrors() {
     return (
       <ul>
@@ -79,7 +79,7 @@ class SessionForm extends React.Component {
             <input
               className="session-submit"
               type="submit"
-              value={this.props.formType}
+              value={capitalizeFormType}
             />
           </div>
         </form>
