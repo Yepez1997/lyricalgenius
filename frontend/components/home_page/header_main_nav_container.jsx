@@ -4,8 +4,8 @@ import {logout} from '../../actions/session_actions';
 import { openModal } from "../../actions/modal_actions";
 import HeaderMainNav from './header_main_nav';
 
-const mapStateToProps = (state) => ({
-    currentUser: state.session.currentUser
+const mapStateToProps = ({ session }) => ({
+    currentUser: session.currentUser
 });
 
 // invoke actions here 

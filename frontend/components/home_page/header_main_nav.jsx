@@ -1,24 +1,35 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const HeaderMainNav = (props) => {
+const HeaderMainNav = ({currentUser, logout, modal}) => {
   //TODO: ADD TO CHANGE
 
   const logOut = () => (
-    <>
-    <h2 className="header-name">Hi, {props.currentUser.username}!</h2>
-    <button className="modal-button" onClick={() => props.logout()}>Log Out</button>
-    </>
+    <button className="modal-button" onClick={() => logout()}>Log Out</button>
   );
 
   const signInSignUp = () => (
     <>
-    <button className="modal-button" onClick={() => props.modal("login")}>Login</button>
-    <button className="modal-button" onClick={() => props.modal("signup")}>Signup</button>
+    <button className="modal-button" onClick={() => modal("login")}>Login</button>
+    <button className="modal-button" onClick={() => modal("signup")}>Signup</button>
     </>
   );
 
-  const showButtonStatus = props.currentUser ? logOut() : signInSignUp();
+   const sessionLinks = () => (
+    <nav className="login-signup">
+      <button onClick={() => openModal('login')}>Login</button>
+      &nbsp;or&nbsp;
+      <button onClick={() => openModal('signup')}>Signup</button>
+    </nav>
+  );
+  const personalGreeting = () => (
+    <hgroup className="header-group">
+      <h2 className="header-name">Hi, {currentUser.username}!</h2>
+      <button className="header-button" onClick={logout}>Log Out</button>
+    </hgroup>
+  );
+
+  const showButton = currentUser ? logOut(currentUser, logout) : signInSignUp();
 
   return (  
     <header className="genius-header">
@@ -31,7 +42,7 @@ const HeaderMainNav = (props) => {
         </Link>
       </div>
       <div className="user-buttons">
-         {showButtonStatus}
+         {showButton}
       </div>
     </header>
     );

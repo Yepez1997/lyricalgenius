@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
             <input
               className="session-submit"
               type="submit"
-              value={capitalizeFormType}
+              value={this.props.formType}
             />
           </div>
         </form>
