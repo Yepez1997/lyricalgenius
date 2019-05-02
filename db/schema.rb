@@ -10,10 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_30_230909) do
+ActiveRecord::Schema.define(version: 2019_05_02_082314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.integer "artist_id", null: false
+    t.string "album_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "annotations", force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.integer "song_id", null: false
+    t.integer "annotation_id"
+    t.integer "start_index", null: false
+    t.integer "end_index", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name", null: false
+    t.boolean "is_verified", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_artists_on_name", unique: true
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.integer "song_id", null: false
+    t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.integer "album_id", null: false
+    t.text "lyrics", null: false
+    t.string "title", null: false
+    t.string "genre", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
