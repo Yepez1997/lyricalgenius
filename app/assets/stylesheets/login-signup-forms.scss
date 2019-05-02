@@ -14,17 +14,17 @@
     margin: auto;
 }
 
-.session_submit>input[type="submit"]{
-    padding: 4px;
+.session-submit{
+    padding: 4px 8px;
+    border: black solid 2px;
     width: fit-content;
-    border-style: solid;
-    line-height: 1.4rem;
-    border-color: black;
     border-width: .15rem;
+    line-height: 1.4rem;
 }
 
 .session-submit:hover {
     cursor: pointer;
+    background-color: #ccc;
 }
 
 .login-input {
@@ -38,7 +38,7 @@
     align-self: center;
     color: #99a7ee;
     display: block;
-    border-bottom: 3px solid  #99a7ee;
+    border-bottom: 2px solid  #99a7ee;
 
 
 }

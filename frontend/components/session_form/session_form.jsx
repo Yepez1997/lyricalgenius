@@ -22,6 +22,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+    // if not sucess do not close modal 
     this.props.closeModal();
   }
  // want to clear errors here ? 
