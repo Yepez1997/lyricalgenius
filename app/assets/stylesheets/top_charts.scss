@@ -1,26 +1,44 @@
 .songInfo-box {
     position: absolute;
-    border: black solid 3px;
-    top: 30%;
+    top: 20%;
     width: 100%;
-    border-top: .15rem solid #000;
-    border-bottom: 0px;
-
+    font-family: Programme, sans-serif;
 }
 
 .songInfo {
     display: flex;
     border-bottom: black;
     justify-content: center;
+    align-items: center;
+    padding:0 1rem;
     // align-self: center;
+}
+
+.songInfo-number, .songInfo-name{
+    font-weight: bold;
 }
 
 .songInfo > li {
     display: block;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    min-height: 40px;
 }
 
+.songInfo:nth-child(1) > li:nth-child(1) { 
+    border-top: .15rem solid #000
+}
+
+.songInfo:nth-child(1) > li:nth-child(2) { 
+    border-top: .15rem solid #000
+}
+
+.songInfo:nth-child(1) > li:nth-child(3) { 
+    border-top: .15rem solid #000
+}
+
+
+
 .songInfo-name {
-    width: 20vw;
+    width: 57vw;
 }
