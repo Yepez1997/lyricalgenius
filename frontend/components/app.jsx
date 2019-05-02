@@ -24,7 +24,6 @@ const App = () => (
             <HeaderMainNavContainter/>
             <HeaderInfoNav/>
             <ArtistsFooterNav/>
-            <GreetingContainer/>
         </header>
         <Switch>
         </Switch>

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import  GreetingContainer from '../greeting/greeting_container';
 
 const HeaderMainNav = ({currentUser, logout, modal}) => {
   //TODO: ADD TO CHANGE
@@ -29,7 +30,7 @@ const HeaderMainNav = ({currentUser, logout, modal}) => {
         </Link>
       </div>
       <div className="user-buttons">
-         {showButton}
+         <GreetingContainer/>
       </div>
     </header>
     );
