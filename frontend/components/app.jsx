@@ -11,6 +11,7 @@ import { logout } from '../actions/session_actions';
 import HeaderMainNavContainter from './home_page/header_main_nav_container';
 import HeaderInfoNav from './home_page/header_info_nav';
 import ArtistsFooterNav from './home_page/artists_footer_nav';
+import TopCharts from './home_page/top_charts';
 import Modal from './modal/modal';
 
 
@@ -22,6 +23,7 @@ const App = () => (
         <header>
             <HeaderMainNavContainter/>
             <HeaderInfoNav/>
+            <TopCharts/>
             <ArtistsFooterNav/>
         </header>
         <Switch>

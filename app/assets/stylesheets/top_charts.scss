@@ -1,0 +1,26 @@
+.songInfo-box {
+    position: absolute;
+    border: black solid 3px;
+    top: 30%;
+    width: 100%;
+    border-top: .15rem solid #000;
+    border-bottom: 0px;
+
+}
+
+.songInfo {
+    display: flex;
+    border-bottom: black;
+    justify-content: center;
+    // align-self: center;
+}
+
+.songInfo > li {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.songInfo-name {
+    width: 20vw;
+}
