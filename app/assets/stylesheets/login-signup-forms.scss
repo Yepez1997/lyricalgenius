@@ -1,7 +1,9 @@
 
 .login-form-box {
     background: #e9e9e9;
-
+    padding: 1rem 1.313rem;
+    margin: 1rem auto;
+    animation: expand_in .15s cubic-bezier(.25,.46,.45,.94);
 }
 
 .login-form {
@@ -12,12 +14,31 @@
     margin: auto;
 }
 
-.session_submit {
-    border: black;
+.session_submit>input[type="submit"]{
+    padding: 4px;
+    width: fit-content;
+    border-style: solid;
+    line-height: 1.4rem;
+    border-color: black;
+    border-width: .15rem;
+}
+
+.session-submit:hover {
+    cursor: pointer;
 }
 
 .login-input {
   border: 2px solid gray;
   padding: 1px;
   border-radius: 3px;
+  border-color:.15rem solid #ccc;
+}
+
+.login-welcome {
+    align-self: center;
+    color: #99a7ee;
+    display: block;
+    border-bottom: 3px solid  #99a7ee;
+
+
 }

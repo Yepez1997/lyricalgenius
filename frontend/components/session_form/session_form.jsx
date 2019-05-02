@@ -35,7 +35,15 @@ class SessionForm extends React.Component {
   }
 
   //Please {this.props.formType} or {this.props.navLink}
+  // signin
   render() {
+    let capitalizeFormType;
+    if (this.props.formType === "login")  {
+      capitalizeFormType = this.props.formType[0].toUpperCase() + this.props.formType.slice(1);
+    } 
+    else {
+      capitalizeFormType = this.props.formType[0].toUpperCase() + this.props.formType.slice(1,4) + " " + this.props.formType.slice(4)
+    } 
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -43,31 +51,34 @@ class SessionForm extends React.Component {
 
           {this.renderErrors()}
           <div className="login-form">
+            <div className="login-welcome">
+              <span className="login-header-text"> Welcome to Lyrical Genius </span> 
+            </div>
             <br />
             <label>
-              Username:
               <input
                 type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
                 className="login-input"
+                placeholder="Username"
               />
             </label>
             <br />
             <label>
-              Password:
               <input
                 type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
                 className="login-input"
+                placeholder="Password"
               />
             </label>
             <br />
             <input
               className="session-submit"
               type="submit"
-              value={this.props.formType}
+              value={capitalizeFormType}
             />
           </div>
         </form>

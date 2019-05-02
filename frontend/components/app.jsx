@@ -14,11 +14,8 @@ import ArtistsFooterNav from './home_page/artists_footer_nav';
 import Modal from './modal/modal';
 
 
-import SignUpFormContainer from './session_form/signup_form_container';
-import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-// FIXME: REMOVE LINKS TO LOGIN/SIGN UP WHEN CREATING A MODAL
 const App = () => (
     <div>
         <Modal/>
