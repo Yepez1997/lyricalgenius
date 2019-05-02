@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import  GreetingContainer from '../greeting/greeting_container';
+import  UserStateContainer from '../user_state/user_state_container';
 
 const HeaderMainNav = ({currentUser, logout, modal}) => {
   //TODO: ADD TO CHANGE
@@ -30,7 +30,7 @@ const HeaderMainNav = ({currentUser, logout, modal}) => {
         </Link>
       </div>
       <div className="user-buttons">
-         <GreetingContainer/>
+         <UserStateContainer/>
       </div>
     </header>
     );

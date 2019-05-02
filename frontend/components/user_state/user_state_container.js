@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
 import { openModal } from "../../actions/modal_actions";
-import Greeting from './greeting';
+import UserState from './user_state';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
   return {
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Greeting);
+)(UserState);

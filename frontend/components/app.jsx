@@ -12,7 +12,6 @@ import HeaderMainNavContainter from './home_page/header_main_nav_container';
 import HeaderInfoNav from './home_page/header_info_nav';
 import ArtistsFooterNav from './home_page/artists_footer_nav';
 import Modal from './modal/modal';
-import GreetingContainer from './greeting/greeting_container';
 
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
