@@ -1,0 +1,8 @@
+May 2nd 2019 
+DONE 
+Finish User Auth
+DB Associations 
+TO DO 
+Seed data
+Set Up redux for the data
+    Jbuilder etc etc 
