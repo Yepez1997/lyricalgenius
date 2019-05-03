@@ -11,7 +11,7 @@ import {
 import HeaderMainNavContainter from './home_page/header_main_nav_container';
 import HeaderInfoNav from './home_page/header_info_nav';
 import ArtistsFooterNav from './home_page/artists_footer_nav';
-import TopCharts from './home_page/top_charts';
+import TopChartsContainer from './home_page/top_charts_container';
 import LyricsContainer from './lyrics_page/lyrics_container';
 import Modal from './modal/modal';
 
@@ -24,7 +24,7 @@ const App = () => (
     <header>
       <HeaderMainNavContainter />
       <HeaderInfoNav />
-      <TopCharts />
+      <TopChartsContainer/>
       <ArtistsFooterNav />
     </header>
     <Switch>

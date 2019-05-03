@@ -39,6 +39,7 @@ class SessionForm extends React.Component {
 
   //Please {this.props.formType} or {this.props.navLink}
   // signin
+  // only want to render errors if 
   render() {
     let capitalizeFormType;
     if (this.props.formType === "login")  {
