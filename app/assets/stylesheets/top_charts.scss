@@ -11,18 +11,28 @@
     justify-content: center;
     align-items: center;
     padding:0 1rem;
-    // align-self: center;
+    // width: fit-content;
+}
+
+.songInfo:hover {
+    background-color: #ccc;
+    // width: fit-content;
+    cursor: pointer;
 }
 
 .songInfo-number, .songInfo-name{
     font-weight: bold;
 }
 
+.songInfo-number {
+    align-self: center;
+}
+
 .songInfo > li {
     display: block;
     padding: 10px;
     border-bottom: 1px solid #ccc;
-    min-height: 60px;
+    min-height: 66px;
 }
 
 .songInfo:nth-child(1) > li:nth-child(1) { 
@@ -38,14 +48,14 @@
 }
 
 
-.songInfo > li:hover {
-    background-color: red;
-}
+// .songInfo > li:hover {
+//     background-color: red;
+// }
 
 
 .songInfo-name {
     width: 57vw;
-    padding: 4px;
+    padding: 3px;
 }
 
 .songInfo-name {
