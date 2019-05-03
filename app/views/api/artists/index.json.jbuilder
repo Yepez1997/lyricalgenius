@@ -1,1 +1,1 @@
-json.array! @artists, :name, :is_verified
+json.array! @artists, :id, :name, :is_verified

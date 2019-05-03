@@ -1,4 +1,6 @@
 class Api::AnnotationsController < ApplicationController
+
+    # before_action :required_login
     
     def create 
     end
