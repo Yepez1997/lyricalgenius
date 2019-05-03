@@ -13,19 +13,21 @@ class TopCharts extends React.Component {
 
     render() {
         //TODO: INJECT ALL DATA FROM DATABASE HERE 
-        debugger;
+        const songs = this.props.songs.map((song, index) => {
+          return (
+            <ul className="songInfo" key={song.id}>
+              <li className="songInfo-number"> {index + 1} </li>
+              <li className="songInfo-image"> Dummy-Info </li>
+              <li className="songInfo-name">
+                <span className="songInfo-title">{song.title}</span>
+                <span className="songInfo-artist">{song.artist}</span>
+              </li>
+            </ul>
+          );
+        })
         return (
           <div className="songInfo-box">
-            <ul className="songInfo">
-              <li className="songInfo-number"> 1 </li>
-              <li className="songInfo-image"> Dummy-Info </li>
-              <li className="songInfo-name"> Title </li>
-            </ul>
-            <ul className="songInfo">
-              <li className="songInfo-number"> 2 </li>
-              <li className="songInfo-image"> Dummy-Info </li>
-              <li className="songInfo-name"> Title </li>
-            </ul>
+            {songs}
           </div>
         );
     }

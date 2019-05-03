@@ -38,7 +38,26 @@
 }
 
 
+.songInfo > li:hover {
+    background-color: red;
+}
+
 
 .songInfo-name {
     width: 57vw;
+    padding: 4px;
+}
+
+.songInfo-name {
+    display: block;
+    font-size: 20px;
+    font-weight: 700px;
+    padding: 5px;
+    font-family: Programme, sans-serif;
+}
+
+.songInfo-artist {
+    display: block;
+    font-size: 12px;
+    font-family: Programme, sans-serif;
 }
