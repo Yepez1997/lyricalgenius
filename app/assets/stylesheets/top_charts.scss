@@ -1,8 +1,10 @@
 .songInfo-box {
     position: absolute;
     top: 20%;
-    width: 100%;
+    width: 60%;
+    margin: 0 20%;
     font-family: Programme, sans-serif;
+    border-top: solid .15rem #000
 }
 
 .songInfo {
@@ -10,7 +12,8 @@
     border-bottom: black;
     justify-content: center;
     align-items: center;
-    padding:0 1rem;
+    border-bottom: solid 1px #ccc;
+    // padding:0 1rem;
     // width: fit-content;
 }
 
@@ -28,24 +31,25 @@
     align-self: center;
 }
 
-.songInfo > li {
-    display: block;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    min-height: 66px;
-}
 
-.songInfo:nth-child(1) > li:nth-child(1) { 
-    border-top: .15rem solid #000
-}
+// .songInfo > li {
+//     display: block;
+//     padding: 10px;
+//     border-bottom: 1px solid #ccc;
+//     min-height: 66px;
+// }
 
-.songInfo:nth-child(1) > li:nth-child(2) { 
-    border-top: .15rem solid #000
-}
+// .songInfo:nth-child(1) > li:nth-child(1) { 
+//     border-top: .15rem solid #000
+// }
 
-.songInfo:nth-child(1) > li:nth-child(3) { 
-    border-top: .15rem solid #000
-}
+// .songInfo:nth-child(1) > li:nth-child(2) { 
+//     border-top: .15rem solid #000
+// }
+
+// .songInfo:nth-child(1) > li:nth-child(3) { 
+//     border-top: .15rem solid #000
+// }
 
 
 // .songInfo > li:hover {

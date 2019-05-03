@@ -154,13 +154,17 @@ small {
     font-size: 14px;
     color: #ffff64;
     background: black;
-    min-height: 38px;
+    // min-height: 38px;
+    max-height: 20%;
+    // max-height: 10%;
 }
 
 .footer-links {
     display: flex;
     justify-content: center;
     padding: 10px;
+    // max-height: 10%;
+    // position: absolute;
 }
 
 .footer-links>li:hover {
