@@ -34,7 +34,7 @@ small {
     text-align: inherit;
     text-decoration: inherit;
     vertical-align: inherit;
-    box-sizing: inherit;
+    box-sizing: border-box;
     background: transparent;
 }
 
@@ -56,36 +56,35 @@ small {
 .user-buttons {
     display: flex;
     padding: .75rem .5rem 0;
-    font-size: 14px;
+    font-size: 12px;
     align-items: center;
     font-family: Programme, sans-serif;
-    overflow: hidden;
-    position: relative;
+    // overflow: hidden;
+    // position: relative;
     box-sizing: border-box;
     text-align: center;
-    position: relative;
+    // position: relative;
+    padding: 5px;
     bottom: 5px;
+    margin: 5px;
+    margin-top: 10px;
 }
 
-.user-buttons>a {
-    display: block;
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-family: Programme, sans-serif;
-    border-bottom: 3px solid transparent;
-}
+// .user-buttons>a {
+//     display: block;
+//     color: black;
+//     padding: 10px 15px;
+//     text-decoration: none;
+//     font-family: Programme, sans-serif;
+//     border-bottom: 3px solid transparent;
+// }
 
-.user-buttons>a:hover {
-    border-bottom: 3px solid red;
-}
-
-.user-buttons a.active {
-    border-bottom: 3px solid red;
-}
 
 .logo-link {
     align-self: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: -2px 2px 0px black;
+    font-weight: 900px;
 }
 
 .search-input {
@@ -121,7 +120,6 @@ small {
 }
 
 .tool-header>.header-links {
-    padding: 10px;
     text-transform: uppercase;
 }
 
@@ -221,11 +219,20 @@ ul>li {
 /* buttons */
 .modal-button {
     padding: 5px;
+    font-family: Programme, sans-serif;
 }
 
 
 .modal-button:hover {
     cursor: pointer;
-    border-bottom: 10px solid #ff1464; /* or whatever colour you'd prefer */
-    margin: 5px;
+    border-bottom: 5px solid #ff1464; /* or whatever colour you'd prefer */
+    // margin: 5px
+}
+
+/* render errors */
+.render-errors {
+    background-color: red;
+    color: white;
+    font-family: Programme, sans-serif;
+    font-weight: 14px;
 }

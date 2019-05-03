@@ -21,14 +21,15 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(() => this.props.closeModal());
     // if not sucess do not close modal 
-    this.props.closeModal();
+    // this.props.closeModal();
   }
  // want to clear errors here ? 
+ // add styling
   renderErrors() {
     return (
-      <ul>
+      <ul className="render-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -51,19 +52,23 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
 
-          {this.renderErrors()}
           <div className="login-form">
             <div className="login-welcome">
-              <span className="login-header-text"> Welcome to Lyrical Genius </span> 
+              <span className="login-header-text">
+                {" "}
+                Welcome to Lyrical Genius{" "}
+              </span>
             </div>
+            <br/>
+            {this.renderErrors()}
             <br />
             <label>
               <input
-                type="text"
+                type="username"
                 value={this.state.username}
                 onChange={this.update("username")}
                 className="login-input"
-                placeholder="Username"
+                placeholder=" Username"
               />
             </label>
             <br />
@@ -73,7 +78,7 @@ class SessionForm extends React.Component {
                 value={this.state.password}
                 onChange={this.update("password")}
                 className="login-input"
-                placeholder="Password"
+                placeholder=" Password"
               />
             </label>
             <br />

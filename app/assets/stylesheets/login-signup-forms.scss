@@ -3,6 +3,7 @@
     background: #e9e9e9;
     padding: 1rem 1.313rem;
     margin: 1rem auto;
+    width: 420px;
     animation: expand_in .15s cubic-bezier(.25,.46,.45,.94);
 }
 
@@ -30,8 +31,9 @@
 .login-input {
   border: 2px solid gray;
   padding: 1px;
-  border-radius: 3px;
   border-color:.15rem solid #ccc;
+  width: 100%;
+  height: 35px;
 }
 
 .login-welcome {
@@ -39,6 +41,15 @@
     color: #99a7ee;
     display: block;
     border-bottom: 2px solid  #99a7ee;
+    width: 100%;
+    font: 15px;
 
+}
 
+.login-header-text {
+//   text-align: center;
+    display: block;
+    padding: 12px;
+    text-align: center;
+    font: 16px;
 }
