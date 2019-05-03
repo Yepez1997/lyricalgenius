@@ -1,3 +1,3 @@
-json.extract! @song :title, :genre, :lyrics
-json.artist @song.artist
-json.album @song.album
+json.extract! @song, :title, :genre, :lyrics
+json.artist @song.artist.name
+json.album @song.album.album_name
