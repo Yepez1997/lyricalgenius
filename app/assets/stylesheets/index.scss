@@ -45,7 +45,7 @@ small {
     display: flex;
     justify-content: space-between;
     margin: auto;
-    height: 38px;
+    height: 41px;
     padding: 4.8px;
     background: #ffff64;
     line-height: 1.45;
@@ -56,11 +56,9 @@ small {
 .user-buttons {
     display: flex;
     padding: .75rem .5rem 0;
-    font-size: 12px;
+    font-size: 14px;
     align-items: center;
     font-family: Programme, sans-serif;
-    // overflow: hidden;
-    // position: relative;
     box-sizing: border-box;
     text-align: center;
     // position: relative;
@@ -79,12 +77,16 @@ small {
 //     border-bottom: 3px solid transparent;
 // }
 
-
 .logo-link {
     align-self: center;
-    font-family: 'Courier New', Courier, monospace;
     text-shadow: -2px 2px 0px black;
-    font-weight: 900px;
+    top: 20px;
+    font-weight: 700px;
+    // transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #ffff64;
+    text-shadow: -2.3px 2px 0px #000000;
+    font-family: sans-serif;
 }
 
 .search-input {

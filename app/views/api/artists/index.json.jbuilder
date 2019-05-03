@@ -1,0 +1,1 @@
+json.array! @artists, :name, :is_verified

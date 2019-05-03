@@ -1,0 +1,5 @@
+json.extract! @album, :album_name
+json.artist @album.artist
+json.songs do @album.songs |song|
+    json.title song.title 
+end

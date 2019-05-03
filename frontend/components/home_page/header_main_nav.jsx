@@ -26,7 +26,7 @@ const HeaderMainNav = ({currentUser, logout, modal}) => {
       </div>
       <div className="logo-link">
         <Link to="/" className="logo-link">
-          <h1>Lyrical Genius</h1>
+          <h1>L y r i c a l G e n i u s</h1>
         </Link>
       </div>
       <div className="user-buttons">

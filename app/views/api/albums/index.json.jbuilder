@@ -1,0 +1,1 @@
+json.array! @albums, :album_name
