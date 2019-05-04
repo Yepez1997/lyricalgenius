@@ -7,6 +7,7 @@ class TopCharts extends React.Component {
     constructor(props) {
         super(props);
     }
+    
     componentDidMount() {
       this.props.fetchSongs();
     }
