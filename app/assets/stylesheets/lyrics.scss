@@ -15,17 +15,18 @@
 
 .comment-column-layout {
     display: inline-block;
-    background-color: red;
+    background-color: rgba(0,0,0,.6);
     width: 30%;
 }
 
 .song-lyrics-body {
-    width: 30%;
+    width: 40%;
     height: 100%;
     display: inline-block;
     margin: 20px;
     padding: 0px 16px 0px 24px;
     font-family: Programme, sans-serif;
+    font-size: 18px;
 
 }
 
@@ -34,11 +35,27 @@
 //     padding: 5px;
 // }
 
-.song-lyrics-body > p:hover {
+.song-lyrics-body > p:nth-child(n+2):hover {
     background-color: #ffff64;
+    width: fit-content;
 }
 
 .song-lyrics-body > p {
     display: block;
     padding: 5px;
+}
+
+#song-title {
+    color: #9a9a9a;
+    font-family: Programme, sans-serif;
+    // margin-top: 1rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    // margin-top: -35px;
+    margin-left: -3px;
+    padding: 7px;
+}
+
+#song-title > p:hover{
+    background-color: white;
 }

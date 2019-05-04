@@ -31,7 +31,7 @@ class Lyrics extends React.Component {
     let htmlLyric = Object.values(htmlLyricObject);
     let htmlLyricMap = htmlLyric.map((el, index) => {
       return ( 
-       <p> {htmlLyric[index].innerHTML} </p>
+       <p key={index}> {htmlLyric[index].innerHTML} </p>
       );
     });
     debugger
@@ -44,6 +44,7 @@ class Lyrics extends React.Component {
         </div>
         <div className="main-section">
             <div className="song-lyrics-body"> 
+              <h1 id="song-title"> {this.props.song.title} LYRICS</h1>
               {htmlLyricMap}
             </div>
             <div className="comment-column-layout">
