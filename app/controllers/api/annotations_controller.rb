@@ -1,17 +1,20 @@
 class Api::AnnotationsController < ApplicationController
 
-    # before_action :required_login
+    before_action :require_logged_in
     
     def create 
+        # get song id
+        # auhtor id 
+        
     end
 
     def index 
+        # find the current users annotations 
+        @annotations = current_user.annotations
     end
 
     def show 
-    end 
-
-    def destroy 
+        @annotation = current_user.annotations.find(params[:id])
     end 
 
     def update 
