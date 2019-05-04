@@ -23,8 +23,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <Switch>
-      <Route exact path="/" component={HomePage} />
       <Route exact path="/songs/:songId" component={LyricsContainer} />
+      <Route exact path="/" component={HomePage} />
     </Switch>
   </div>
 );

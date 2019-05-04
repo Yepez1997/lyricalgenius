@@ -4,7 +4,7 @@
     width: 60%;
     margin: 0 20%;
     font-family: Programme, sans-serif;
-    border-top: solid .15rem #000
+    border-top: solid .15rem #000;
 }
 
 .songInfo {
@@ -13,12 +13,13 @@
     justify-content: center;
     align-items: center;
     border-bottom: solid 1px #ccc;
+    padding: 0 1rem;
     // padding:0 1rem;
     // width: fit-content;
 }
 
 .songInfo:hover {
-    background-color: #ccc;
+    background-color: #f2f2f2;
     // width: fit-content;
     cursor: pointer;
 }
@@ -40,8 +41,14 @@
 // }
 
 // .songInfo:nth-child(1) > li:nth-child(1) { 
-//     border-top: .15rem solid #000
+//     border: .15rem solid black;
+//     height: 34px;
 // }
+
+.songInfo > li:nth-child(1) { 
+    border: .15rem solid black;
+    height: 36px;
+}
 
 // .songInfo:nth-child(1) > li:nth-child(2) { 
 //     border-top: .15rem solid #000
@@ -64,7 +71,7 @@
 
 .songInfo-name {
     display: block;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700px;
     padding: 5px;
     font-family: Programme, sans-serif;
