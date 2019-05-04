@@ -1,0 +1,30 @@
+
+.artist-header {
+    padding: 2.25rem 0 1.5rem 0;
+    height: 280px;
+    background-color: rgba(0,0,0,.6);
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    
+    padding: 0px 16px 0px 24px;
+}
+
+.comment-column-layout {
+    display: inline-block;
+    background-color: red;
+    width: 30%;
+}
+
+.song-lyrics-body {
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    margin: 20px;
+    padding: 0px 16px 0px 24px;
+    font-family: Programme, sans-serif;
+
+}

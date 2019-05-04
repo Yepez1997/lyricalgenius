@@ -18,12 +18,19 @@ class Lyrics extends React.Component {
     if (!this.props.song) {
         return null
     }
-    debugger;
     return (
       <>
         <HeaderMainNavContainer />
-        <HeaderInfoNav />
-        <p> {this.props.song.lyrics} </p>
+        <HeaderInfoNav /> 
+        <div className="artist-header"> 
+            <p> </p>
+        </div>
+        <div className="main-section">
+            <p className="song-lyrics-body"> {this.props.song.lyrics} </p>
+            <div className="comment-column-layout">
+                <p> </p>
+            </div>  
+        </div>
       </>
     );
   }
