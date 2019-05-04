@@ -15,25 +15,41 @@ def stringifyLyric(lyrics):
 # have a button on the left 
 # can trigger multiple responses
 
+
+def get_left_over_lyrics(lyrics_array, columns):
+    rest_lyrics = (columns * 9)
+    return lyrics_add_p_tags(" ".join(lyrics_array[rest_lyrics:]))
+    
+
 def split_lyrics(lyrics):
     lyrics_array =  lyrics.split(' ')
     lyrics_len =  len(lyrics_array)
     # find the row size 8/9 words per row 
-    row_size = 9 # 9 words per pow 
+    #row_size = 9 # 9 words per pow 
     lyrics_final = []
     current_row = []
+    columns =  lyrics_len / 9; 
     current_row_string = ""
     count = 0 
-    for i in lyrics_array: 
+    # never gets the left overs so check for them 
+    # if i is in between len - 8 
+    for i in range(len(lyrics_array)): 
+        count += 1
         if count == 9:
+            current_row.append(lyrics_array[i])
             current_row_string = " ".join(current_row)
+            # appending the proper lyric row 
             lyrics_final.append(lyrics_add_p_tags(current_row_string))
             current_row_string =  ""
+            current_row = []
             count = 0
+            #count += 1
         else:
-            count += 1
             # may want to also insert p tags at the end of this string
-            current_row.append(i)
+            current_row.append(lyrics_array[i])
+    # get the last once done parsing og rounding
+    lyrics_final.append(get_left_over_lyrics(lyrics_array, columns))
+    return lyrics_final
 
 
 # this script will be super useful in seperating in rows 

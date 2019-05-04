@@ -28,7 +28,8 @@ for the annotation should render the annotation on the same page
             thus can render that annotation id !@@@#@$@#TERGERGHWRGVW#@$@#%
                     GOT IT  
             %
-        
+for now focus on highlighting one lyric 
+
 
 
 other notes 
