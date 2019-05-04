@@ -6,3 +6,37 @@ TO DO
 Seed data
 Set Up redux for the data
     Jbuilder etc etc 
+
+
+yikes need to be updating this more 
+okay so need to 
+    1. write pyhton function to add p tags to the end of every row 
+    2. use that lyric data to add onto the page 
+        a. How ? use jquery to convert string object to html object
+        b. 
+
+
+for backend to check for validations 
+need to find out which p tags/ rows are associated with the annotation
+for the annotation should render the annotation on the same page
+    ex on genius website 
+        the annotation renders the lyric page + the  lyric 
+        perhaps need to re render the lyric again ? waste of re rendering ? 
+        lyric_annotation -> lyrical_genius/annotation_id 
+        ? how do i get that info ?  
+            perhaps when the user is on the song the p tag hold information on the lyric_annotation
+            thus can render that annotation id !@@@#@$@#TERGERGHWRGVW#@$@#%
+                    GOT IT  
+            %
+        
+
+
+other notes 
+    when clicking on a lyric 
+    if the user is not signed in then need 
+        show need to sing in component 
+    else 
+        allow the user to annotate 
+        need to keep track of which p tags were highlighted 
+
+if someone encounters this .txt excuse my vernacular ...
