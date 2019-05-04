@@ -29,11 +29,16 @@
 
 }
 
-.song-lyrics-row {
-    display: block;
-    padding: 5px;
+// .song-lyrics-row {
+//     display: block;
+//     padding: 5px;
+// }
+
+.song-lyrics-body > p:hover {
+    background-color: #ffff64;
 }
 
-.song-lyrics-row:hover {
-    background-color: #ffff64;
+.song-lyrics-body > p {
+    display: block;
+    padding: 5px;
 }

@@ -18,6 +18,23 @@ class Lyrics extends React.Component {
     if (!this.props.song) {
         return null
     }
+    // the juice 
+    // .values 
+    const lyrics = this.props.song.lyrics;
+    let htmlLyricObject = $(lyrics);
+  
+    // let htmlLyric = htmlLyricObject.map((el) => {
+    //   return (
+    //     <p> {el} </p>
+    //   );
+    // });
+    let htmlLyric = Object.values(htmlLyricObject);
+    let htmlLyricMap = htmlLyric.map((el, index) => {
+      return ( 
+       <p> {htmlLyric[index].innerHTML} </p>
+      );
+    });
+    debugger
     return (
       <>
         <HeaderMainNavContainer />
@@ -27,13 +44,7 @@ class Lyrics extends React.Component {
         </div>
         <div className="main-section">
             <div className="song-lyrics-body"> 
-                <p className="song-lyrics-row"> HERE IS TEST DATA YEESSSSS  </p>
-                <p className="song-lyrics-row"> HERE IS TEST DATA 2  YESSSS </p>
-                <p className="song-lyrics-row"> HERE IS TEST DATA 3 YESSSSS </p>
-                <p className="song-lyrics-row"> HERE IS TEST DATA 4 YESSSSS </p>
-                <p className="song-lyrics-row"> HERE IS TEST DATA 5 YESSSSS </p>
-                <p className="song-lyrics-row"> HERE IS TEST DATA 6 YESSSSS </p>
-                <p className="song-lyrics-row"> HERE IS TEST DATA 7 YESSSSS </p>
+              {htmlLyricMap}
             </div>
             <div className="comment-column-layout">
                 <p> </p>
