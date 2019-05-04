@@ -9,6 +9,7 @@ class TopCharts extends React.Component {
     }
     
     componentDidMount() {
+      // can i set a constraint here to retreive fewer songs 
       this.props.fetchSongs();
     }
 
@@ -16,7 +17,8 @@ class TopCharts extends React.Component {
 
     //<Link to=`/songs/${song.id}`> {song.title } </Link>
     render() {
-        //TODO: INJECT ALL DATA FROM DATABASE HERE 
+        //TODO: HOW TO FETCH FEW DATA 
+        // TODO: AWS -> 
         const songs = this.props.songs.map((song, index) => {
           let verified = song.artist_verified ? '✅' : " ";
           return (
