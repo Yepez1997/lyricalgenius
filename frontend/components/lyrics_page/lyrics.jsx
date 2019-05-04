@@ -15,12 +15,15 @@ class Lyrics extends React.Component {
   }
 
   render() {
-      debugger;
+    if (!this.props.song) {
+        return null
+    }
+    debugger;
     return (
       <>
         <HeaderMainNavContainer />
         <HeaderInfoNav />
-        <h1> Lyrics Page </h1>
+        <p> {this.props.song.lyrics} </p>
       </>
     );
   }
