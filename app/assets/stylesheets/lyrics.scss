@@ -28,3 +28,12 @@
     font-family: Programme, sans-serif;
 
 }
+
+.song-lyrics-row {
+    display: block;
+    padding: 5px;
+}
+
+.song-lyrics-row:hover {
+    background-color: red;
+}

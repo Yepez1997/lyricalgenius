@@ -27,14 +27,19 @@ def split_lyrics(lyrics):
     for i in lyrics_array: 
         if count == 9:
             current_row_string = " ".join(current_row)
-            lyrics_final.append(current_row)
+            lyrics_final.append(lyrics_add_p_tags(current_row_string))
             current_row_string =  ""
             count = 0
         else:
             count += 1
-            # may want to also insert p tags at the end of this string 
-            
+            # may want to also insert p tags at the end of this string
             current_row.append(i)
 
 
-
+# this script will be super useful in seperating in rows 
+# once the rows are presennt can set an a tag around the lyric 
+def lyrics_add_p_tags(lyric_row):
+    p_tag = "<p>"
+    closing_p_tag = "</p>"
+    p_tag_lyric = p_tag + lyric_row + closing_p_tag
+    return p_tag_lyric

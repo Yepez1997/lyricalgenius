@@ -26,7 +26,15 @@ class Lyrics extends React.Component {
             <p> </p>
         </div>
         <div className="main-section">
-            <p className="song-lyrics-body"> {this.props.song.lyrics} </p>
+            <div className="song-lyrics-body"> 
+                <p className="song-lyrics-row"> HERE IS TEST DATA YEESSSSS  </p>
+                <p className="song-lyrics-row"> HERE IS TEST DATA 2  YESSSS </p>
+                <p className="song-lyrics-row"> HERE IS TEST DATA 3 YESSSSS </p>
+                <p className="song-lyrics-row"> HERE IS TEST DATA 4 YESSSSS </p>
+                <p className="song-lyrics-row"> HERE IS TEST DATA 5 YESSSSS </p>
+                <p className="song-lyrics-row"> HERE IS TEST DATA 6 YESSSSS </p>
+                <p className="song-lyrics-row"> HERE IS TEST DATA 7 YESSSSS </p>
+            </div>
             <div className="comment-column-layout">
                 <p> </p>
             </div>  
