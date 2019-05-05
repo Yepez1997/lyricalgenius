@@ -4,5 +4,6 @@
     json.set! album.id do 
         json.title album.title
         json.genre album.artist
+        json.photo url_for(album.photo)
     end
 end 

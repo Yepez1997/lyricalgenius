@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 ActiveRecord::Base.transaction do
     
     User.destroy_all 
@@ -12,7 +13,9 @@ ActiveRecord::Base.transaction do
     user1 = User.create!({username: "panda123", password:  "password"})
     user2 = User.create!({username: "yepez2020", password: "password"})
 
-
+    #https://s3-us-west-1.amazonaws.com/lyrical-genius-dev/kids_see_ghosts.jpg
+    kids_see_ghost_song_file = open('https://s3-us-west-1.amazonaws.com/seed-lyrical-genius/kids_see_ghosts.jpg')
+    scorpion_file_item = open('https://s3-us-west-1.amazonaws.com/seed-lyrical-genius/scorpion.jpg')
     # Artists
     Artist.destroy_all
     drake = Artist.create!({name: "Drake", is_verified: true})
@@ -23,7 +26,9 @@ ActiveRecord::Base.transaction do
     Album.destroy_all
     kids_see_ghosts_album = Album.create!({artist_id: kids_see_ghosts.id, album_name: "Kids See Ghosts"})
     scorpion = Album.create!({artist_id: drake.id, album_name: "Scorpion"})
-
+    # photo attatch 
+    kids_see_ghosts_album.photo.attach(io: kids_see_ghost_song_file, filename: 'kids_see_ghost_cover.jpg')
+    scorpion.photo.attach(io: scorpion_file_item, filename:'scorpion_cover.jpg')
 
     # Songs 
     Song.destroy_all

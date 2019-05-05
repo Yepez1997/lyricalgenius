@@ -25,7 +25,7 @@ class TopCharts extends React.Component {
             <Link to={`/songs/${song.id}`}>
               <ul className="songInfo" key={song.id}>
                 <li className="songInfo-number"> {index + 1} </li>
-                <li className="songInfo-image"> Dummy-Info </li>
+                <li className="songInfo-image"> <img src={song.photo}/> </li>
                 <li className="songInfo-name">
                   <span className="songInfo-title">{song.title}</span>
                   <span className="songInfo-artist">

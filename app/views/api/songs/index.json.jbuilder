@@ -7,5 +7,6 @@
         json.artist song.artist.name 
         json.artist_verified song.artist.is_verified
         json.genre song.genre
+        json.photo url_for(song.album.photo)
     end
 end 
