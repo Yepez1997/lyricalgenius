@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import HeaderMainNavContainer from "../home_page/header_main_nav_container";
 import HeaderInfoNav from "../home_page/header_info_nav";
 
@@ -8,11 +9,25 @@ import HeaderInfoNav from "../home_page/header_info_nav";
 class Lyrics extends React.Component {
   constructor(props) {
     super(props);
+    //this.reply_click = this.reply_click.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchSong(this.props.match.params.songId);
+    // $("button").click(function () {
+    //   alert(); 
+    // });
   }
+
+  reply_click(e) {
+    // e.preventDefault();
+    // // console.log('wtf');
+    
+    // this.setState({ [field]: e.target.value });
+    console.log(e.currentTarget.className);
+    // alert(e.currentTarget.className)
+  }
+  
 
   render() {
     if (!this.props.song) {
@@ -31,16 +46,16 @@ class Lyrics extends React.Component {
     let htmlLyric = Object.values(htmlLyricObject);
     let htmlLyricMap = htmlLyric.map((el, index) => {
       return ( 
-       <p key={index}> {htmlLyric[index].innerHTML} </p>
+        <button className={`${index}`} onClick={this.reply_click.bind(this)} key={index}> {htmlLyric[index].innerHTML} </button>
       );
     });
-    debugger
+
     return (
       <>
         <HeaderMainNavContainer />
         <HeaderInfoNav /> 
         <div className="artist-header"> 
-            <p> </p>
+            <img src={this.props.song.photo}/>
         </div>
         <div className="main-section">
             <div className="song-lyrics-body"> 

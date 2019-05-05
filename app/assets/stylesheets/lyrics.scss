@@ -1,22 +1,20 @@
 
 .artist-header {
-    padding: 2.25rem 0 1.5rem 0;
+    padding: 0 0 1.5rem 0;
     height: 280px;
-    background-color: rgba(0,0,0,.6);
 }
 
 .main-section {
     display: flex;
     justify-content: center;
     margin: 20px;
-    
     padding: 0px 16px 0px 24px;
 }
 
 .comment-column-layout {
     display: inline-block;
-    background-color: rgba(0,0,0,.6);
     width: 30%;
+    background-color: rgba(0,0,0,.6);
 }
 
 .song-lyrics-body {
@@ -35,10 +33,15 @@
 //     padding: 5px;
 // }
 
-.song-lyrics-body > p:nth-child(n+2):hover {
+.song-lyrics-body > button:nth-child(n+2):hover {
     background-color: #ffff64;
     width: fit-content;
 }
+
+.song-lyrics-body > button {
+    padding: 5px;
+}
+
 
 .song-lyrics-body > p {
     display: block;
@@ -58,4 +61,13 @@
 
 #song-title > p:hover{
     background-color: white;
+}
+
+.artist-header > img {
+    position: absolute;
+    width: 100%;
+    height: 38%;
+    //object-fit: cover;
+    background-size: contain;
+    
 }
