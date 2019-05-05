@@ -10,6 +10,9 @@ class Lyrics extends React.Component {
   constructor(props) {
     super(props);
     //this.reply_click = this.reply_click.bind(this);
+    // this.state = {
+    //   bgColor: 'white'
+    // }
   }
 
   componentDidMount() {
@@ -24,7 +27,11 @@ class Lyrics extends React.Component {
     // // console.log('wtf');
     
     // this.setState({ [field]: e.target.value });
+    debugger
     console.log(e.currentTarget.className);
+    // this.setState({
+    //   bgColor: 'red'
+    // });
     // alert(e.currentTarget.className)
   }
   
@@ -46,7 +53,10 @@ class Lyrics extends React.Component {
     let htmlLyric = Object.values(htmlLyricObject);
     let htmlLyricMap = htmlLyric.map((el, index) => {
       return ( 
-        <button className={`${index}`} onClick={this.reply_click.bind(this)} key={index}> {htmlLyric[index].innerHTML} </button>
+        <button className={`${index}`} 
+        onClick={this.reply_click.bind(this)} 
+        key={index} 
+        > {htmlLyric[index].innerHTML} </button>
       );
     });
 
