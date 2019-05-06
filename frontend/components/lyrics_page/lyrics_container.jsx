@@ -10,7 +10,9 @@ const mapStateToProps = (state, ownParams) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchSong: (id) => dispatch(fetchSong(id))
+  fetchSong: (id) => dispatch(fetchSong(id)),
+  modal: (type) => dispatch(openModal(type)),
+  logout: () => dispatch(logout())
 });
 
 

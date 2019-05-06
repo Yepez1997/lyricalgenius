@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderMainNavContainer from "../home_page/header_main_nav_container";
 import HeaderInfoNav from "../home_page/header_info_nav";
+import Modal from '../modal/modal';
 
 // get this.props.match.params.songId
 // request this information 
@@ -22,12 +23,12 @@ class Lyrics extends React.Component {
     // });
   }
 
+  //TODO: remove function later on 
   reply_click(e) {
     // e.preventDefault();
     // // console.log('wtf');
     
     // this.setState({ [field]: e.target.value });
-    debugger
     console.log(e.currentTarget.className);
     // this.setState({
     //   bgColor: 'red'
@@ -40,8 +41,7 @@ class Lyrics extends React.Component {
     if (!this.props.song) {
         return null
     }
-    // the juice 
-    // .values 
+
     const lyrics = this.props.song.lyrics;
     let htmlLyricObject = $(lyrics);
   
@@ -62,10 +62,21 @@ class Lyrics extends React.Component {
 
     return (
       <>
+        <Modal/>
         <HeaderMainNavContainer />
         <HeaderInfoNav /> 
         <div className="artist-header"> 
             <img src={this.props.song.photo}/>
+            <div className="artist-container">
+              <div className="album-image"> 
+                <img src={this.props.song.photo} />
+              </div>
+              <div className="album-info"> 
+                  <h1> Song Name</h1>
+                  <h2> Album Name</h2>
+                  <h2> Artist Name</h2>
+              </div>
+            </div>
         </div>
         <div className="main-section">
             <div className="song-lyrics-body"> 

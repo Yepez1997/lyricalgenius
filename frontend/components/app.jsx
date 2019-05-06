@@ -14,7 +14,8 @@ import {
 // import TopChartsContainer from './home_page/top_charts_container';
 import LyricsContainer from './lyrics_page/lyrics_container';
 // import Modal from './modal/modal';
-import HomePage from "./home_page/home_page"
+import HomePage from "./home_page/home_page";
+import ArtistsContainer from './artist_page/artist_container';
 
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -24,7 +25,7 @@ const App = () => (
   <div>
     <Switch>
       <Route exact path="/songs/:songId" component={LyricsContainer} />
-      <Route exact path="/artists" component={HomePage}/>
+      <Route exact path="/artists" component={ArtistsContainer}/>
       <Route exact path="/artists/:artistId" component={HomePage} />
       <Route exact path="/" component={HomePage} />
     </Switch>
