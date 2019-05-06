@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import HeaderMainNavContainer from "../home_page/header_main_nav_container";
 import HeaderInfoNav from "../home_page/header_info_nav";
 import Modal from '../modal/modal';
-import AnnotationFormContainer from '../annotation_form/annotation_form_container';
+// import AnnotationFormContainer from '../annotation_form/annotation_form_container';
+import UserAnnotationContainer from "../annotation_form/user_annotation_state_container";
 
 // get this.props.match.params.songId
 // request this information 
@@ -24,18 +25,12 @@ class Lyrics extends React.Component {
     // });
   }
 
-  //TODO: remove function later on 
-  reply_click(e) {
+
+  // dispactchees the button id to the state to keep track of which button were clicked 
+  dispatch_button(e) {
     // e.preventDefault();
-    // // console.log('wtf');
-    
-    // this.setState({ [field]: e.target.value });
     this.props.receiveLink(parseInt(e.currentTarget.className));
-    console.log(e.currentTarget.className);
-    // this.setState({
-    //   bgColor: 'red'
-    // });
-    // alert(e.currentTarget.className)
+
   }
   
 
@@ -46,22 +41,17 @@ class Lyrics extends React.Component {
 
     const lyrics = this.props.song.lyrics;
     let htmlLyricObject = $(lyrics);
-  
-    // let htmlLyric = htmlLyricObject.map((el) => {
-    //   return (
-    //     <p> {el} </p>
-    //   );
-    // });
     let htmlLyric = Object.values(htmlLyricObject);
     let htmlLyricMap = htmlLyric.map((el, index) => {
       return ( 
         <button className={`${index}`} 
-        onClick={this.reply_click.bind(this)} 
+        onClick={this.dispatch_button.bind(this)} 
         key={index} 
         > {htmlLyric[index].innerHTML} </button>
       );
     });
 
+    
     return (
       <>
         <Modal/>
@@ -86,7 +76,7 @@ class Lyrics extends React.Component {
               {htmlLyricMap}
             </div>
             <div className="comment-column-layout">
-                <AnnotationFormContainer/>
+                <UserAnnotationContainer/>
             </div>
         </div>
       </>

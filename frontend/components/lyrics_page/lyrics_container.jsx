@@ -7,7 +7,8 @@ import { receiveLink } from "../../actions/links_actions";
 
 
 const mapStateToProps = (state, ownParams) => ({
-    song: state.entities.songs[ownParams.match.params.songId]
+    song: state.entities.songs[ownParams.match.params.songId],
+    currentUser: state.entities.users[state.session.id]
 });
 
 const mapDispatchToProps = dispatch => ({

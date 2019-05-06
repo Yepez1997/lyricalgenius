@@ -4,6 +4,7 @@ import React from 'react';
 class AnnotationForm extends React.Component {
     constructor(props) {
         super (props);
+        this.state = this.props.annotation;
     }
 
 
