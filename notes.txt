@@ -116,3 +116,15 @@ know when to stop when the user has submited
 if the user never submited want to restore the original state 
 maybe have a desroy functionalry or in the reducer should have a method
 to dispatch to restore to original state 
+
+8pm
+okay now im testing all this 
+test all my associations for 30 min 
+
+Test song id 38 
+# once the links are dispatched create the annotaion
+# create the link between the song a
+1. create the annotation 
+2. create links 
+
+seems coutner

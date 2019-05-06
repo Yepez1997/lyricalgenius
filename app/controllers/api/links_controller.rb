@@ -12,6 +12,10 @@ class Api::LinksController < ApplicationController
         # should link to the rest of the links 
         if @link.save!
             render '/api/links'
+        else 
+            render :json => { "ERROR" }
+        end
+
         
     end
 

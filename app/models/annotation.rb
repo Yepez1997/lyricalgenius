@@ -14,6 +14,6 @@ class Annotation < ApplicationRecord
     has_many :links,
     primary_key: :id,
     foreign_key: :annotation_id,
-    class_name: :Links
+    class_name: :Link
 
 end
