@@ -4,15 +4,12 @@ import AnnotationFormContainer from './annotation_form_container';
 
 const UserAnnotationState = (props) => {
     const annotationLinks = () => (
-        <>
-        <AnnotationFormContainer/>
-        </>
+        props.links.length > 0 ?  <AnnotationFormContainer/> : <h1> Start Annotating </h1>
     );
 
     const signInRequiredToAnnotate = () => (
-        <button> Please Sign In !!! </button>
+        <button className="signup-annotate"> Sign Up To Start Annotating </button>
     );
-    debugger 
     return props.currentUser ? annotationLinks() : signInRequiredToAnnotate();
 };
 
