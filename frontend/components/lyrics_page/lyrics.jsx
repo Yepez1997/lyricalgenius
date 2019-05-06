@@ -72,9 +72,9 @@ class Lyrics extends React.Component {
                 <img src={this.props.song.photo} />
               </div>
               <div className="album-info"> 
-                  <h1> Song Name</h1>
-                  <h2> Album Name</h2>
-                  <h2> Artist Name</h2>
+                  <h1 className="album-info-title"> {this.props.song.title}</h1>
+                  <h1 className="album-info-artist"> {this.props.song.artist}</h1>
+                  <h1 className="album-info-album"> Album {this.props.song.album}</h1>
               </div>
             </div>
         </div>

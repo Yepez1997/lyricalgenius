@@ -1,9 +1,10 @@
 
 .artist-header {
     padding: 0 0 1.5rem 0;
+    position: absolute;
     height: 280px;
-    max-height: 7%;
-    background: #ffff64
+    max-height: 20%;
+    width: 100%
 }
 
 .main-section {
@@ -11,13 +12,14 @@
     justify-content: center;
     margin: 20px;
     padding: 0px 16px 0px 24px;
+    padding-top: 18%;
 }
 
 .comment-column-layout {
     display: inline-block;
     margin-top: 3%;
     width: 30%;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.1);
 }
 
 .song-lyrics-body {
@@ -67,9 +69,9 @@
 }
 
 .artist-header > img {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 35%;
+    height: 280px;
     //object-fit: cover
     background-size: contain;
     
@@ -82,7 +84,7 @@
 }
 
 .album-image {
-    position: relative;
+    //position: relative;
     background-size: contain;
     border: solid black 1px;
    
@@ -90,17 +92,48 @@
 }
 
 .album-image > img {
-    width: 200px;
-    height: 200px;
-    max-height: 7%;
-    margin-top: 10%;
+    position: absolute;
+    object-fit: contain;
+    //max-height: 25%;
+    height: 220px;
+    margin-top: 5%;
+    top: -22%;
+    left: 20%;
+    border: gray solid 3px;
 }
 
 .album-info {
-    position: relative;
-    align-self: center
+    position: absolute;
+    align-self: center;
+    top: 33%;
+    left: 37%;
 }
 
 .album-info .album-image {
     display: inline-block;
+}
+
+
+.album-info-title {
+    color: #ffff64;
+    //font-size: 2.25em;
+    font-size: 36px;
+    font-family: Programme, sans-serif;
+    font-weight: 700px;
+    margin-bottom: .25rem;
+    //line-height: 1.5rem;
+}
+
+.album-info-album {
+    color: #7d8fe8;
+    font-family: Programme, sans-serif;
+    font-size: 16px;
+}
+
+.album-info-artist {
+     font-family: Programme, sans-serif;
+     color: white;
+     font-size: 24px;
+     margin-bottom: .25rem;
+     //line-height: 1.4rem;
 }

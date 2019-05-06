@@ -140,3 +140,7 @@ once the annotaion is created
 
 
 this can become an issue if the song already has links -> perhaps can create validations for this ....
+
+may 6th 2018 7am 
+get the reducers done for the links
+so my json return the right data, this is good 

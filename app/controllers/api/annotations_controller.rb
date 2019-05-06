@@ -6,15 +6,18 @@ class Api::AnnotationsController < ApplicationController
         # get song idx
         # auhtor id 
         @annotation = Annotation.new(annotation_params)
-        @annotation[:author_id] = current_user
+        debugger 
+        #TODO: chance 3 back to current user 
+        @annotation[:author_id] = current_user.id
+        #current_user.id
         # maybe it is [:annoation][:song_id]
         # but perhaps [:song_id]
         # should show up as all the new annotatio
-        @annoation[:song_id] = params[:song_id]
-        if @annoation.save!
-            render '/api/annotations'
+        @annotation[:song_id] = params[:song_id]
+        if @annotation.save!
+            render "api/annotations/show"
         else 
-            render :json => { "ERROR" }
+            render json: @annotation.errors.full_messages, status: 422
         end
 
     end
@@ -22,11 +25,11 @@ class Api::AnnotationsController < ApplicationController
     def index 
         # find the current users annotations 
         # retrieves the current users annotations 
-        @annotations = current_user.annotations
+        @annotations = Annotation.all
     end
 
     def show 
-        @annotation = current_user.annotations.find(params[:id])
+        @annotation = Annotation.find(params[:id])
     end 
 
     # dont think need to support update rn
