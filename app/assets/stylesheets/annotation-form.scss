@@ -1,0 +1,35 @@
+.form-body > textarea {
+    background-color: #f7f7f7;
+    color: #9a9a9a;
+    resize: none;
+    width: 100%;
+    margin-top: 5%;
+    border: #99a7ee solid 2px;
+    font-family: Programme, sans-serif;
+}
+
+textarea {
+    padding: 5px;
+}
+
+
+.form-button {
+   margin-top: 10px;
+}
+
+.form-button > button {
+    padding: 10px;
+}
+
+.save {
+    font-family: Programme, sans-serif;
+    border: 3px solid #38ef51;
+    padding: 3px;
+    color: #38ef51;
+}
+
+.cancel {
+    font-family: Programme, sans-serif;
+    color: #9a9a9a;
+
+}

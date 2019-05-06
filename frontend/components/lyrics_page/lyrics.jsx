@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import HeaderMainNavContainer from "../home_page/header_main_nav_container";
 import HeaderInfoNav from "../home_page/header_info_nav";
 import Modal from '../modal/modal';
+import AnnotationFormContainer from '../annotation_form/annotation_form_container';
 
 // get this.props.match.params.songId
 // request this information 
@@ -85,8 +86,8 @@ class Lyrics extends React.Component {
               {htmlLyricMap}
             </div>
             <div className="comment-column-layout">
-                <p> </p>
-            </div>  
+                <AnnotationFormContainer/>
+            </div>
         </div>
       </>
     );

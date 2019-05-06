@@ -19,7 +19,8 @@
     display: inline-block;
     margin-top: 3%;
     width: 30%;
-    background-color: rgba(0,0,0,.1);
+    border-left: #99a7ee solid 3px;
+    padding-left: calc(1rem + 4px);
 }
 
 .song-lyrics-body {
@@ -105,8 +106,10 @@
 .album-info {
     position: absolute;
     align-self: center;
-    top: 33%;
-    left: 37%;
+    font-size: 2.25rem;
+    top: 30%;
+    left: 36%;
+    font-feature-settings: "ss07","ss08","ss11","ss12","ss14","ss15","ss16","ss18","ss19","ss20","ss21";
 }
 
 .album-info .album-image {
