@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_05_001948) do
+ActiveRecord::Schema.define(version: 2019_05_06_015619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,9 +46,7 @@ ActiveRecord::Schema.define(version: 2019_05_05_001948) do
   create_table "annotations", force: :cascade do |t|
     t.integer "author_id", null: false
     t.integer "song_id", null: false
-    t.integer "annotation_id"
-    t.integer "start_index", null: false
-    t.integer "end_index", null: false
+    t.text "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -65,6 +63,13 @@ ActiveRecord::Schema.define(version: 2019_05_05_001948) do
     t.integer "author_id", null: false
     t.integer "song_id", null: false
     t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.integer "annotation_id"
+    t.integer "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

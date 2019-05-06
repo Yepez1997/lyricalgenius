@@ -20,7 +20,8 @@ class User < ApplicationRecord
 
 
 
-
+# should i add a unique index on the annotation id and link 
+# want every annotaion to have muiltiple links 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user

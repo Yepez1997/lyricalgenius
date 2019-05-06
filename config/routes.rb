@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     resources :songs, only: [:show,:index]
     resources :comments, only: [:show,:index, :create, :destroy]
     resources :annotations, only: [:show,:index, :create, :destroy, :update]
-
+    resources :links, only: [:create, :index]
   end
 end

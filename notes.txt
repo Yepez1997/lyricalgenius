@@ -41,3 +41,78 @@ other notes
         need to keep track of which p tags were highlighted 
 
 if someone encounters this .txt excuse my vernacular ...
+
+
+may 5th 2015 
+
+    at the beggining want to render all annotaions with their highlights 
+    once the user clicks the button over the highlight
+        we should be able to see the old page + /annotaionid-route
+
+    okay now need to figure out how to create an annotation
+    this is tricky 
+        perhaps need to do a joins table 
+        due to the way my data is structured on the lyrics page
+        each line on the lyrics page is a button and 
+        i did something clever such thatevery button generated 
+        has a class name to uniquely identify that button 
+            ie the first button has className=1 , second has className=2 
+        Given that each button holds information we want to be able to click
+        any amount of buttons and add an annotaion 
+        once a button is clicked want to dispacht an action that this button has been clicked 
+
+        Song 
+            has many annotaions
+        Annotaion 
+            belongs to song 
+        Song Row
+            belongs to song_annotation
+
+
+        # need an annotations reducer 
+        annotataions state 
+            song 1 has annotaions
+                    1 {
+                        paragraphs/triggered [1,2]
+                        author
+                        body
+                    }
+                    2 {
+                        paragraphs triggerde [5,6,7]
+                        author 
+                        body
+                    }
+                    3 {
+                        author 
+                        body
+                    }
+                    4 {
+                        author 
+                        body
+                    }     
+
+            song 2 has annotaions 
+                    5 {
+                        author
+                        body
+
+                    }
+                   
+
+            want to create annotation if the 
+            need to add validation where a song cannot have the same paragraphs triggered 
+            paragraphs triggered should be highlighted and trigger the annotation on the right side 
+
+
+        song row depends on the song -> will be differennt for every song 
+
+    first want to dispatch to create links 
+    then after creating the neccesary links want to create the annotionn and render from there 
+    seems link a perfectly valid apporach 
+    
+
+how to know when to stop creating links ?
+know when to stop when the user has submited 
+if the user never submited want to restore the original state 
+maybe have a desroy functionalry or in the reducer should have a method
+to dispatch to restore to original state 

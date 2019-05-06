@@ -13,5 +13,10 @@ class Song < ApplicationRecord
     through: :album,
     source: :artist
 
+    has_many :links,
+    primary_key: :id,
+    foreign_key: :song_id,
+    class_name: :Link
+
 
 end
