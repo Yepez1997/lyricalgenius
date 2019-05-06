@@ -1,10 +1,18 @@
 
 .artist-header {
     padding: 0 0 1.5rem 0;
-    position: absolute;
+    position: relative;
     height: 280px;
     max-height: 20%;
     width: 100%
+}
+
+.artist-header::before{
+    background: linear-gradient(to bottom,rgba(0,0,0,.4) 0,rgba(0,0,0,.65) 70%);
+    content: " ";
+    background-color: black;
+    position: relative;
+    animation: fade_in_background_image .75s both;
 }
 
 .main-section {
@@ -12,7 +20,6 @@
     justify-content: center;
     margin: 20px;
     padding: 0px 16px 0px 24px;
-    padding-top: 18%;
 }
 
 .comment-column-layout {
@@ -21,6 +28,7 @@
     width: 30%;
     border-left: #99a7ee solid 3px;
     padding-left: calc(1rem + 4px);
+    height: fit-content;
 }
 
 .song-lyrics-body {
@@ -75,6 +83,8 @@
     height: 280px;
     //object-fit: cover
     background-size: contain;
+    //opacity: 0.8; 
+    filter: brightness(40%);
     
 }
 
@@ -97,7 +107,7 @@
     object-fit: contain;
     //max-height: 25%;
     height: 220px;
-    margin-top: 5%;
+    margin-top: 6%;
     top: -22%;
     left: 20%;
     border: gray solid 3px;
