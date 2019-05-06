@@ -128,3 +128,15 @@ Test song id 38
 2. create links 
 
 seems coutner
+
+so after 20 min i got my backend to work now i have to figure out how put it in my state 
+
+
+need to be able to create the post have the links 
+cant create the link until the annotaion is created 
+once the annotaion is created
+    the state should keep track of what buttons were pressed 
+    given that we know what buttons were preseed we can dispatch a request to connect the links with the annotaion
+
+
+this can become an issue if the song already has links -> perhaps can create validations for this ....
