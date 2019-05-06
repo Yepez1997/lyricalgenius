@@ -13,7 +13,7 @@ class Api::LinksController < ApplicationController
         if @link.save!
             render '/api/links'
         else 
-            render :json => { "ERROR" }
+            render json: @link.errors.full_messages, status: 422
         end
 
         

@@ -29,6 +29,7 @@ class Lyrics extends React.Component {
     // // console.log('wtf');
     
     // this.setState({ [field]: e.target.value });
+    this.props.receiveLink(parseInt(e.currentTarget.className));
     console.log(e.currentTarget.className);
     // this.setState({
     //   bgColor: 'red'
@@ -39,7 +40,7 @@ class Lyrics extends React.Component {
 
   render() {
     if (!this.props.song) {
-        return null
+        return null;
     }
 
     const lyrics = this.props.song.lyrics;

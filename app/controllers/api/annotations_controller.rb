@@ -2,12 +2,11 @@ class Api::AnnotationsController < ApplicationController
 
     before_action :require_logged_in
     
+    # FIXME: NEEDS FIX OR CLARIFICATION 
     def create 
         # get song idx
         # auhtor id 
         @annotation = Annotation.new(annotation_params)
-        debugger 
-        #TODO: chance 3 back to current user 
         @annotation[:author_id] = current_user.id
         #current_user.id
         # maybe it is [:annoation][:song_id]
