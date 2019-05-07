@@ -56,7 +56,11 @@ class AnnotationForm extends React.Component {
                 });
             });
         });
-        //this.setState({body:"", song_id:""});
+        // reset the state
+        this.setState({
+          body: "",
+          song_id: parseInt(this.props.match.params.songId)
+        });
     }
 
     render() {
