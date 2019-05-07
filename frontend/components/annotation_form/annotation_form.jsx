@@ -53,7 +53,6 @@ class AnnotationForm extends React.Component {
 
     render() {
     
-        // FIXME: add onchange handlers to cancel 
         return(
             <div className="form">
                 <div className="form-body">

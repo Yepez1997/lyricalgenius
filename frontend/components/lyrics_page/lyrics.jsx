@@ -37,7 +37,7 @@ class Lyrics extends React.Component {
     //let color_id = this.state.white ? "white" : "yellow";
     // keep track of the previousClicked button !
     if (this.state.previousClick != e.currentTarget.id) {
-    // !!this.state.clickedLink   fsgsd
+
       this.setState({white: !!this.state.white,
         clickedLink: !!this.state.clickedLink,
         previousClick: e.currentTarget.id
@@ -54,7 +54,7 @@ class Lyrics extends React.Component {
     this.state.clickedLink
       ? this.props.receiveLink(parseInt(e.currentTarget.id))
       : this.props.removeLink(parseInt(e.currentTarget.id)); 
-      
+
     document.getElementById(
       `${e.currentTarget.id}`
     ).style.backgroundColor = this.state.white ? "white" : "#ffff64";
@@ -74,6 +74,7 @@ class Lyrics extends React.Component {
     let htmlLyricMap = htmlLyric.map((el, index) => {
       //let fullClassName = index + {btn_class};
       return ( 
+      
           <button id={`${index}` }
           //className={btn_class}
           onClick={this.dispatch_button.bind(this)} 

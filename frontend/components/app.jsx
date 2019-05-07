@@ -16,6 +16,7 @@ import LyricsContainer from './lyrics_page/lyrics_container';
 // import Modal from './modal/modal';
 import HomePage from "./home_page/home_page";
 import ArtistsContainer from './artist_page/artist_container';
+import AnnotationsContainer from './annotation_page/annotations_container';
 
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -27,7 +28,9 @@ const App = () => (
   <div>
     <Switch>
       <Route exact path="/songs/:songId" component={LyricsContainer} />
+      <Route exact path="/:annotationId" component={AnnotationsContainer} />
       <Route exact path="/" component={HomePage} />
+    
     </Switch>
   </div>
 );
