@@ -1,5 +1,4 @@
 import { connect } from "react-redux";
-import React from 'react';
 import Lyrics from './lyrics';
 // THIS IS AN ACTION
 import { fetchSong } from "../../actions/song_actions";

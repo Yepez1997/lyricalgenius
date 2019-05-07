@@ -27,8 +27,6 @@ const App = () => (
   <div>
     <Switch>
       <Route exact path="/songs/:songId" component={LyricsContainer} />
-      <Route exact path="/artists/:artistId" component={HomePage} />
-      <Route exact path="/artists" component={ArtistsContainer} />
       <Route exact path="/" component={HomePage} />
     </Switch>
   </div>

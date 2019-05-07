@@ -7,7 +7,6 @@ class AnnotationForm extends React.Component {
         this.state = {body: "", 
         song_id: parseInt(this.props.match.params.songId)};
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.createLinks = this.createLinks.bind(this);
     }
     
     update(field) {
@@ -18,34 +17,21 @@ class AnnotationForm extends React.Component {
 
     // now want to dispatch tthe links to create the link 
     // after wn
-    updateSongId() {
-       // debugger 
-        this.setState({
-            song_id: this.props.match.params.songId}
-        );
-    }
+    // updateSongId() {
+    //    // debugger 
+    //     this.setState({
+    //         song_id: this.props.match.params.songId}
+    //     );
+    // }
 
-    // create links should take in an annotation pojo
-    createLinks(annotation) {
-
-    }
+    //TODO: add a component did upadate 
 
     handleSubmit(e) {
-        this.updateSongId();
+        //this.updateSongId();
         e.preventDefault();
-      // TODO -> should dispatch and create a state 
-        // submit to the db 
-        // want to have a seperate pojo for the links 
-
-        // should return pojo with the new id =>
-        // disptach the idk wiht the annotation
-        // take a look at this function 
-        // FIXME: LOOK OVER THIS !!! !!
-        // let {links} = this.props;
         const {createLink, links} = this.props;
         this.props.createAnnotation(this.state).then(annotation => {
             // Object.values(this.props.links);
-            debugger; 
             links.forEach(link_id => {
                 // no sesnse of this 
                 // grabbing the right data ?
