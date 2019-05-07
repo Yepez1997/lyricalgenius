@@ -1,4 +1,5 @@
 //TODO: create a createLink method as a util method that makes a request to the data base 
+import * as LinkAPIUtil from '../util/links_api_util';
 export const RECEIVE_LINKS = "RECEIVE_LINKS";
 export const RECEIVE_LINK = "RECEIVE_LINK";
 
@@ -11,5 +12,9 @@ export const receiveLink = (link) => ({
     type: RECEIVE_LINK,
     link
 });
+
+export const createLink = (link) => dispatch => (
+    LinkAPIUtil.createLink(link).then((link) => dispatch(receiveLink(link)))
+);
 
 

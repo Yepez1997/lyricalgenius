@@ -1,7 +1,7 @@
 import merge from "lodash/merge";
 
 import { RECEIVE_ARTISTS } from "../actions/artist_actions";
-import {RECEIVE_ARTIST } from "../actions/artist_actions";
+import { RECEIVE_ARTIST } from "../actions/artist_actions";
 
 const artistsReducer = (state = {}, action) => {
   Object.freeze(state);

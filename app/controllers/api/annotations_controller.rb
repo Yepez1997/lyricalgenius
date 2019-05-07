@@ -7,11 +7,8 @@ class Api::AnnotationsController < ApplicationController
         # auhtor id 
         @annotation = Annotation.new(annotation_params)
         @annotation[:author_id] = current_user.id
-        #current_user.id
-        # maybe it is [:annoation][:song_id]
-        # but perhaps [:song_id]
-        # should show up as all the new annotatio
-        @annotation[:song_id] = params[:song_id]
+        
+        @annotation[:song_id] = params[:annotation][:song_id]
         if @annotation.save!
             render "api/annotations/show"
         else 
@@ -35,6 +32,6 @@ class Api::AnnotationsController < ApplicationController
     end
 
     def annotation_params
-        params.require(:annotation).permit(:body)
+        params.require(:annotation).permit(:body,:song_id)
     end 
 end

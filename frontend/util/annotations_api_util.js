@@ -1,14 +1,15 @@
-export const createAnnotation = () => (
+export const createAnnotation = (annotation) => (
     $.ajax({
     method: 'POST',
-    url: `/api/annotations`
+    url: `/api/annotations`,
+    data: {annotation}
   })
 );
 
 export const fetchAnnotation = (id) => (
     $.ajax({
     method: 'GET',
-    url: `/api/annotation/${id}`
+    url: `/api/annotations/${id}`
   })
 );
 
