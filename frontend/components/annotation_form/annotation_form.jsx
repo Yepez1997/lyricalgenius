@@ -40,18 +40,22 @@ class AnnotationForm extends React.Component {
         // should return pojo with the new id =>
         // disptach the idk wiht the annotation
         // take a look at this function 
-        // FIXME: LOOK OVER THIS !!!!!
+        // FIXME: LOOK OVER THIS !!! !!
+        // let {links} = this.props;
+        const {createLink, links} = this.props;
         this.props.createAnnotation(this.state).then(annotation => {
-            this.props.links.map(link => {
-                return (
-                    this.props.createLink({
-                        link: link.id,
-                        annotation_id: annotation.id
-                    })
-                );
+            // Object.values(this.props.links);
+            debugger; 
+            links.forEach(link_id => {
+                // no sesnse of this 
+                // grabbing the right data ?
+                // is this defiend ?
+                createLink({
+                  link: link_id,
+                  annotation_id: annotation.annotation.annotation_id
+                });
             });
         });
-        debugger;
         //this.setState({body:"", song_id:""});
     }
 
