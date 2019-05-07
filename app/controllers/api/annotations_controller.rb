@@ -1,6 +1,5 @@
 class Api::AnnotationsController < ApplicationController
 
-    before_action :require_logged_in
     
     # FIXME: NEEDS FIX OR CLARIFICATION 
     def create 

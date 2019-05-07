@@ -35,6 +35,7 @@ class Lyrics extends React.Component {
   
 
   render() {
+    // why do we check this 
     if (!this.props.song) {
         return null;
     }
@@ -42,6 +43,7 @@ class Lyrics extends React.Component {
     const lyrics = this.props.song.lyrics;
     let htmlLyricObject = $(lyrics);
     let htmlLyric = Object.values(htmlLyricObject);
+    // iterate the links here and check if the links exists 
     let htmlLyricMap = htmlLyric.map((el, index) => {
       return ( 
         <button className={`${index}`} 

@@ -16,15 +16,15 @@ class AnnotationForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // TODO -> should dispatch and create a state 
+      // TODO -> should dispatch and create a state 
         console.log("FAKE SAVED THIS");
         this.setState({body:""});
     }
 
     render() {
+        debugger 
         // FIXME: add onchange handlers 
         return(
-
             <div className="form">
                 <div className="form-body">
                     <textarea onChange={this.update('body')}
