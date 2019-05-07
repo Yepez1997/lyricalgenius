@@ -13,9 +13,12 @@ class Lyrics extends React.Component {
   constructor(props) {
     super(props);
     //this.reply_click = this.reply_click.bind(this);
-    // this.state = {
-    //   bgColor: 'white'
-    // }
+    // may also want to keep track on of onclick and off click
+    // if the button is clicked so does the state of the background color 
+    this.state = {
+      white: true,
+      clickedLink: false
+    }
   }
 
   componentDidMount() {
@@ -25,12 +28,18 @@ class Lyrics extends React.Component {
     // });
   }
 
-
   // dispactchees the button id to the state to keep track of which button were clicked 
   dispatch_button(e) {
     // e.preventDefault();
-    this.props.receiveLink(parseInt(e.currentTarget.className));
-
+    //this.props.receiveLink(parseInt(e.currentTarget.className));
+    this.setState({backgroundColor: !this.state.white,
+    clickedLink: !this.state.clickedLink
+    });
+    // if true want to dispatch else remove the link
+    // type of dispatch i want
+    this.state.clickedLink
+      ? this.props.receiveLink(parseInt(e.currentTarget.className))
+      : this.props.removeLink(parseInt(e.currentTarget.className));
   }
   
 
@@ -40,20 +49,20 @@ class Lyrics extends React.Component {
         return null;
     }
 
+    let btn_class = this.state.white ? "whiteButton" : "yellowButton";
     const lyrics = this.props.song.lyrics;
     let htmlLyricObject = $(lyrics);
     let htmlLyric = Object.values(htmlLyricObject);
-    // iterate the links here and check if the links exists 
     let htmlLyricMap = htmlLyric.map((el, index) => {
       return ( 
-        <button className={`${index}`} 
+        <button className={`${index}` }
         onClick={this.dispatch_button.bind(this)} 
         key={index} 
+      
         > {htmlLyric[index].innerHTML} </button>
       );
     });
 
-    
     return (
       <>
         <Modal/>

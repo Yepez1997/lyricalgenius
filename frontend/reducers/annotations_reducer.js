@@ -7,7 +7,7 @@ const annotationsReducer = (state = {}, action) => {
         case RECEIVE_ANNOTATIONS:
             return merge({}, state, action.annotations);
         case RECEIVE_ANNOTATION:
-            return merge({}, state, {[action.annotation]: action.annotation});
+            return merge({}, state, {[action.annotation.annotation_id]: action.annotation});
         default: 
             return state;
     }
