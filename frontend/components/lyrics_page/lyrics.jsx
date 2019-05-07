@@ -16,11 +16,13 @@ class Lyrics extends React.Component {
     // may also want to keep track on of onclick and off click
     // if the button is clicked so does the state of the background color 
     this.state = {
-      white: true,
-      clickedLink: false
+      white: false,
+      clickedLink: true,
+      previousClick: -1
     }
   }
 
+  // check previousClick
   componentDidMount() {
     this.props.fetchSong(this.props.match.params.songId);
     // $("button").click(function () {
@@ -32,14 +34,30 @@ class Lyrics extends React.Component {
   dispatch_button(e) {
     // e.preventDefault();
     //this.props.receiveLink(parseInt(e.currentTarget.className));
-    this.setState({backgroundColor: !this.state.white,
-    clickedLink: !this.state.clickedLink
-    });
+    //let color_id = this.state.white ? "white" : "yellow";
+    // keep track of the previousClicked button !
+    if (this.state.previousClick != e.currentTarget.id) {
+    // !!this.state.clickedLink   fsgsd
+      this.setState({white: !!this.state.white,
+        clickedLink: !!this.state.clickedLink,
+        previousClick: e.currentTarget.id
+      });
+    } else {
+        this.setState({white: !this.state.white,
+        clickedLink: !this.state.clickedLink,
+        previousClick: e.currentTarget.id
+      });
+    }
+  
     // if true want to dispatch else remove the link
     // type of dispatch i want
     this.state.clickedLink
-      ? this.props.receiveLink(parseInt(e.currentTarget.className))
-      : this.props.removeLink(parseInt(e.currentTarget.className));
+      ? this.props.receiveLink(parseInt(e.currentTarget.id))
+      : this.props.removeLink(parseInt(e.currentTarget.id)); 
+      
+    document.getElementById(
+      `${e.currentTarget.id}`
+    ).style.backgroundColor = this.state.white ? "white" : "#ffff64";
   }
   
 
@@ -54,12 +72,13 @@ class Lyrics extends React.Component {
     let htmlLyricObject = $(lyrics);
     let htmlLyric = Object.values(htmlLyricObject);
     let htmlLyricMap = htmlLyric.map((el, index) => {
+      //let fullClassName = index + {btn_class};
       return ( 
-        <button className={`${index}` }
-        onClick={this.dispatch_button.bind(this)} 
-        key={index} 
-      
-        > {htmlLyric[index].innerHTML} </button>
+          <button id={`${index}` }
+          //className={btn_class}
+          onClick={this.dispatch_button.bind(this)} 
+          key={index} 
+          > {htmlLyric[index].innerHTML} </button>
       );
     });
 

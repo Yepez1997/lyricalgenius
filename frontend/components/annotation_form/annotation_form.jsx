@@ -7,6 +7,9 @@ class AnnotationForm extends React.Component {
         this.state = {body: "", 
         song_id: parseInt(this.props.match.params.songId)};
         this.handleSubmit = this.handleSubmit.bind(this);
+        //handle cancel woudl remove all the links in the current page
+        this.handleCancel = this.handleCancel.bind(this);
+
     }
     
     update(field) {
@@ -17,6 +20,17 @@ class AnnotationForm extends React.Component {
 
     //TODO: add a component did upadate 
     // add 
+    handleCancel() {
+        // make a dispatch to remove all links in the state
+        // want to change the color back
+        this.props.links.forEach((link) => {
+            document.getElementById(link).style.backgroundColor = "white";
+        })
+        this.props.removeLinks();
+        // push to history slice 
+        this.props.history.push(`/songs/${this.state.song_id}`);
+
+    }
 
     handleSubmit(e) {
         //this.updateSongId();
@@ -51,7 +65,7 @@ class AnnotationForm extends React.Component {
                 </div>
                 <div className="form-button">
                     <button onClick={this.handleSubmit}className="save"> Save (+15 IQ)</button>
-                    <button className="cancel"> Cancel </button>
+                    <button onClick={this.handleCancel} className="cancel"> Cancel </button>
                 </div>
             </div>
         );
