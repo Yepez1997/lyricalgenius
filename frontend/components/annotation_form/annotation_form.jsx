@@ -15,15 +15,6 @@ class AnnotationForm extends React.Component {
         }
     }
 
-    // now want to dispatch tthe links to create the link 
-    // after wn
-    // updateSongId() {
-    //    // debugger 
-    //     this.setState({
-    //         song_id: this.props.match.params.songId}
-    //     );
-    // }
-
     //TODO: add a component did upadate 
 
     handleSubmit(e) {
@@ -31,11 +22,7 @@ class AnnotationForm extends React.Component {
         e.preventDefault();
         const {createLink, links} = this.props;
         this.props.createAnnotation(this.state).then(annotation => {
-            // Object.values(this.props.links);
             links.forEach(link_id => {
-                // no sesnse of this 
-                // grabbing the right data ?
-                // is this defiend ?
                 createLink({
                   link: link_id,
                   annotation_id: annotation.annotation.annotation_id
