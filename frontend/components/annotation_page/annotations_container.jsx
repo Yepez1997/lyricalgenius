@@ -6,7 +6,7 @@ import  {fetchAnnotation, fetchAnnotations} from "../../actions/annotation_actio
 // want to fetch the current annotation 
 // and link to its llink
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, ownParams) => ({
   //TODO: figure this out
   annotation: state.entities.annotations[ownParams.match.params.annotationId]
 });

@@ -43,8 +43,9 @@ class AnnotationForm extends React.Component {
                   annotation_id: annotation.annotation.annotation_id
                 });
             });
+            // once the links are done push to the link
+            this.props.history.push(`/${annotation.annotation.annotation_id}`)
         });
-        // reset the state
         this.setState({
           body: "",
           song_id: parseInt(this.props.match.params.songId)
@@ -53,6 +54,7 @@ class AnnotationForm extends React.Component {
 
     render() {
     
+        // FIXME: add onchange handlers to cancel 
         return(
             <div className="form">
                 <div className="form-body">

@@ -10,18 +10,8 @@ import LyricRow from "./lyric_row";
 // get this.props.match.params.songId
 // request this information 
 
-const splitLyrics = (lyrics) => {
-  const words = lyrics.split(' ');
-  let lyricRows = [words.slice(0,8)]
-  for (let i = 1; i < words.length; i++) {
-      lyricRows.push(words.slice(1 * i, 8 * i).join(' '));
-  }
-  return lyricRows;
-}
-
 class Lyrics extends React.Component {
   
-  // check previousClick
   componentDidMount() {
     this.props.fetchSong(this.props.match.params.songId);
   }
@@ -33,7 +23,37 @@ class Lyrics extends React.Component {
         return null;
     }
 
-    const songLyrics = splitLyrics(this.props.song.lyrics)
+    if (!this.props.song.lyrics) {
+      return null;
+    }
+
+    debugger 
+    const splitLyrics = lyrics => {
+      if (!lyrics) {
+        return null;
+      }
+      const words = lyrics.split(" ");
+      let words_strings = [];
+      let cols = words.length / 8;
+      let words_array = [];
+      let count = 0;
+      for (let i = 0; i < words.length; i++) {
+        if (count === 8) {
+          let row = words_array.join(" ");
+          words_strings.push(row);
+          words_array = [];
+          count = 0;
+        } else {
+          words_array.push(words[i]);
+          count++;
+        }
+      }
+      words_strings.push(words.slice(cols * 8).join(" "));
+      return words_strings;
+    };
+
+    const songLyrics = splitLyrics(this.props.song.lyrics);
+    
     // console.log(songLyrics);
     const lyricRows = songLyrics.map((lyrics, index) => {
         return (

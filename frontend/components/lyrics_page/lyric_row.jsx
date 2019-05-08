@@ -22,8 +22,10 @@ class LyricRow extends React.Component {
     render() {
         let buttonClass = this.state.clicked ? "yellowButton" :  "";
         return (
-
+            <>
             <button className={buttonClass} onClick={this.handleClick}> {this.props.lyrics} </button>
+            <br></br>
+            </>
         );
     }
 }
