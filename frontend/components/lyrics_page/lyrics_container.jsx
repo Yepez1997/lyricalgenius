@@ -2,8 +2,8 @@ import { connect } from "react-redux";
 import Lyrics from './lyrics';
 // THIS IS AN ACTION
 import { fetchSong } from "../../actions/song_actions";
-import { receiveLink } from "../../actions/links_actions";
-import { removeLink } from "../../actions/links_actions";
+import { receiveLink, removeLink, removeLinks } from "../../actions/links_actions";
+
 
 
 const mapStateToProps = (state, ownParams) => ({
@@ -16,7 +16,8 @@ const mapDispatchToProps = dispatch => ({
   modal: type => dispatch(openModal(type)),
   logout: () => dispatch(logout()),
   receiveLink: id => dispatch(receiveLink(id)),
-  removeLink: id => dispatch(removeLink(id))
+  removeLink: id => dispatch(removeLink(id)),
+  removeLinks: () => dispatch(removeLinks)
 });
 
 

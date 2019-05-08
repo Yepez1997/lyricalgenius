@@ -14,6 +14,7 @@ class Lyrics extends React.Component {
   
   componentDidMount() {
     this.props.fetchSong(this.props.match.params.songId);
+    this.props.removeLinks();
   }
 
 
