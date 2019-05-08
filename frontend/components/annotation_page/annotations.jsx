@@ -7,6 +7,7 @@ import Modal from "../modal/modal";
 // import AnnotationFormContainer from '../annotation_form/annotation_form_container';
 import UserAnnotationContainer from "../annotation_form/user_annotation_state_container";
 import LyricRow from "../lyrics_page/lyric_row";
+import AnnotationRow from "./annotation_row";
 
 class Annotations extends React.Component {
 
@@ -18,9 +19,7 @@ class Annotations extends React.Component {
         this.props.fetchAnnotation(this.props.match.params.annotationId).then((payload) => {
             this.props.fetchSong(payload.annotation.song_id)
         });
-       
     }
-
 
     render() {
         if(!this.props.annotation) {
@@ -31,9 +30,9 @@ class Annotations extends React.Component {
             return null;
         }
         
-         if (!this.props.song.lyrics) {
-      return null;
-    }
+        if (!this.props.song.lyrics) {
+          return null;
+        }
 
 
     const splitLyrics = lyrics => {
@@ -61,6 +60,7 @@ class Annotations extends React.Component {
     };
 
     const songLyrics = splitLyrics(this.props.song.lyrics);
+    const annotationBody = splitLyrics(this.props.annotation.body);
     
     // console.log(songLyrics);
     const lyricRows = songLyrics.map((lyrics, index) => {
@@ -72,7 +72,13 @@ class Annotations extends React.Component {
           lyrics={lyrics}/>
         )
     });
-         return (
+
+      const annotationBodyRow = annotationBody.map((row) => {
+        return (
+            <AnnotationRow row={row}/>
+        )
+      });
+        return (
         <>
         <Modal/>
         <HeaderMainNavContainer />
@@ -96,8 +102,8 @@ class Annotations extends React.Component {
                 {lyricRows}
             </div>
             <div className="comment-column-layout">
-                <h1> {this.props.annotation.author} </h1>
-                <h1> {this.props.annotation.body} </h1>
+              <h1 className="annotation-contributor"> Contributor: {this.props.annotation.author} </h1>
+              {annotationBodyRow}
             </div>
         </div>
         </>
