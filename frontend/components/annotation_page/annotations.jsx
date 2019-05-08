@@ -15,19 +15,28 @@ class Annotations extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchAnnotation(this.props.match.params.annotationId);
-        
-        //this.props.fetchSong(this.props.annotation.song_id);
+        this.props.fetchAnnotation(this.props.match.params.annotationId).then((payload) => {
+            this.props.fetchSong(payload.annotation.song_id)
+        });
+       
     }
 
 
     render() {
-  
-        return (
+        
+        if(!this.props.annotation) {
+            return null;
+        }
+
+        if (!this.props.song) {
+            return null;
+        }
+         return (
         <>
         <Modal/>
         <HeaderMainNavContainer />
         <HeaderInfoNav /> 
+         <h1>  {this.props.song.title} </h1>
         </>
         );
     }

@@ -13,7 +13,7 @@ const App = () => (
   <div>
     <Switch>
       <Route exact path="/songs/:songId" component={LyricsContainer} />
-      <Route exact path="/:annotationId" component={AnnotationContainer} />
+      <Route exact path="/annotations/:annotationId" component={AnnotationContainer} />
       <Route exact path="/" component={HomePage} />
     </Switch>
   </div>

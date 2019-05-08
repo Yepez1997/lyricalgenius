@@ -8,12 +8,13 @@ import { removeLink } from "../../actions/links_actions";
 // want to fetch the current annotation 
 // and link to its llink
 
-const mapStateToProps = (state, ownParams) => ({
+const mapStateToProps = (state, ownParams) => {
+  return {
   //TODO: figure this out
   annotation: state.entities.annotations[ownParams.match.params.annotationId],
-  song: state.entities.songs[state.entities.songs.id],
+  song: state.entities.songs[state.entities.annotations[ownParams.match.params.annotationId].song_id],
   currentUser: state.entities.users[state.session.id]
-});
+}};
 
 // 
 const mapDispatchToProps = (dispatch) => ({

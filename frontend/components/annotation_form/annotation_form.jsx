@@ -44,7 +44,7 @@ class AnnotationForm extends React.Component {
                 });
             });
             // once the links are done push to the link
-            this.props.history.push(`/${annotation.annotation.annotation_id}`)
+            this.props.history.push(`/annotations/${annotation.annotation.annotation_id}`)
         });
         this.setState({
           body: "",
