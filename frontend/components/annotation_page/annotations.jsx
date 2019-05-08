@@ -34,12 +34,18 @@ class Annotations extends React.Component {
           return null;
         }
        
+    // want to check if the length of the annoatation
+
     const splitLyrics = lyrics => {
       const words = lyrics.split(" ");
       let words_strings = [];
       let cols = words.length / 8;
       let words_array = [];
       let count = 0;
+      if (words.length <= 8) {
+        words_array.push(words.join(' '));
+        return words_array;
+      }
       for (let i = 0; i < words.length; i++) {
         if (count === 8) {
           let row = words_array.join(" ");
@@ -68,13 +74,15 @@ class Annotations extends React.Component {
           lyrics={lyrics}/>
         )
     });
-
+  
       const annotationBodyRow = annotationBody.map((row) => {
         return (
             <AnnotationRow row={row}/>
         )
       });
-        return (
+
+      let rowChosen = this.props.annotation.body.split(' ').length < 8 ? <p className="annotation-body-alternative"> {this.props.annotation.body} </p> : annotationBodyRow;
+      return (
         <>
         <Modal/>
         <HeaderMainNavContainer />
@@ -99,7 +107,7 @@ class Annotations extends React.Component {
             </div>
             <div className="comment-column-layout">
               <h1 className="annotation-contributor"> Contributor: {this.props.annotation.author} </h1>
-              {annotationBodyRow}
+              {rowChosen}
             </div>
         </div>
         </>
