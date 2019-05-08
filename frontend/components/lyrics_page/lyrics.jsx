@@ -27,7 +27,7 @@ class Lyrics extends React.Component {
       return null;
     }
 
-    debugger 
+
     const splitLyrics = lyrics => {
       if (!lyrics) {
         return null;
@@ -57,13 +57,13 @@ class Lyrics extends React.Component {
     // console.log(songLyrics);
     const lyricRows = songLyrics.map((lyrics, index) => {
         return (
-          <LyricRow 
+          <LyricRow key={index}
           index={index}
           receiveLink={this.props.receiveLink}
           removeLink={this.props.removeLink}
           lyrics={lyrics}/>
-        );
-    })
+        )
+    });
     return (
       <>
         <Modal/>

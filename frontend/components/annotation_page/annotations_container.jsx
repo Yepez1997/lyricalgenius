@@ -1,20 +1,29 @@
 import { connect } from 'react-redux';
 import Annotations from "./annotations";
 import  {fetchAnnotation, fetchAnnotations} from "../../actions/annotation_actions";
-
+import { fetchSong } from "../../actions/song_actions";
+import { receiveLink } from "../../actions/links_actions";
+import { removeLink } from "../../actions/links_actions";
 
 // want to fetch the current annotation 
 // and link to its llink
 
 const mapStateToProps = (state, ownParams) => ({
   //TODO: figure this out
-  annotation: state.entities.annotations[ownParams.match.params.annotationId]
+  annotation: state.entities.annotations[ownParams.match.params.annotationId],
+  song: state.entities.songs[state.entities.songs.id],
+  currentUser: state.entities.users[state.session.id]
 });
 
 // 
 const mapDispatchToProps = (dispatch) => ({
     fetchAnnotation: (id) => dispatch(fetchAnnotation(id)),
-    fetchAnnotations: () => dispatch(fetchAnnotations)
+    fetchAnnotations: () => dispatch(fetchAnnotations),
+    fetchSong: id => dispatch(fetchSong(id)),
+    modal: type => dispatch(openModal(type)),
+    logout: () => dispatch(logout()),
+    receiveLink: id => dispatch(receiveLink(id)),
+    removeLink: id => dispatch(removeLink(id))
 });
 
 

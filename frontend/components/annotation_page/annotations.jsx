@@ -1,8 +1,12 @@
 import React from 'react';
 
-import { fetchAnnotations } from '../../actions/annotation_actions';
-//TODO: compile all preveious elements in a function and render them 
-
+import ReactDOM from "react-dom";
+import HeaderMainNavContainer from "../home_page/header_main_nav_container";
+import HeaderInfoNav from "../home_page/header_info_nav";
+import Modal from "../modal/modal";
+// import AnnotationFormContainer from '../annotation_form/annotation_form_container';
+import UserAnnotationContainer from "../annotation_form/user_annotation_state_container";
+import LyricRow from "../lyrics_page/lyric_row";
 
 class Annotations extends React.Component {
 
@@ -12,21 +16,19 @@ class Annotations extends React.Component {
 
     componentDidMount() {
         this.props.fetchAnnotation(this.props.match.params.annotationId);
+        
+        //this.props.fetchSong(this.props.annotation.song_id);
     }
 
 
     render() {
-
-        if (!this.props.annotation) {
-            return null;
-        }
-
+  
         return (
-            <>
-            <h1> HERERRER  </h1>
-            <h1> User {this.props.annotation.author} </h1>
-            <h1> {this.props.annotation.body}</h1>
-            </>
+        <>
+        <Modal/>
+        <HeaderMainNavContainer />
+        <HeaderInfoNav /> 
+        </>
         );
     }
 }
