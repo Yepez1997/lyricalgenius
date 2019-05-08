@@ -22,10 +22,12 @@ class LyricRow extends React.Component {
     render() {
         let buttonClass = this.state.clicked ? "yellowButton" :  "";
         // from here should be able to render another link
+        let br = this.props.index % 7 === 0 ? <br></br> : "";
         return (
             <>
             <button className={buttonClass} onClick={this.handleClick}> {this.props.lyrics} </button>
             <br></br>
+            {br}
             </>
         );
     }

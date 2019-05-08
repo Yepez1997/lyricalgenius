@@ -33,12 +33,8 @@ class Annotations extends React.Component {
         if (!this.props.song.lyrics) {
           return null;
         }
-
-
+       
     const splitLyrics = lyrics => {
-      if (!lyrics) {
-        return null;
-      }
       const words = lyrics.split(" ");
       let words_strings = [];
       let cols = words.length / 8;
