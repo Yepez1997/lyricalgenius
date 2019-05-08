@@ -21,6 +21,7 @@ class LyricRow extends React.Component {
 
     render() {
         let buttonClass = this.state.clicked ? "yellowButton" :  "";
+        // from here should be able to render another link
         return (
             <>
             <button className={buttonClass} onClick={this.handleClick}> {this.props.lyrics} </button>

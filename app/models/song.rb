@@ -18,5 +18,10 @@ class Song < ApplicationRecord
     foreign_key: :song_id,
     class_name: :Link
 
+    has_many :annotations,
+    primary_key: :id,
+    foreign_key: :song_id,
+    class_name: :Annotation
+
 
 end
