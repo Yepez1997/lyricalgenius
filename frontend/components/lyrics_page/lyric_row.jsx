@@ -15,6 +15,7 @@ class LyricRow extends React.Component {
   // want to detect first its a link
   // want to pass in the respective annot
   // getLinks = Object.keys(this.props.annotations).map(id => this.props.annotations[id].links
+  //WANT TO HAVE A DIFFERENT CLICK HANDLER 
   handleClick() {
     this.setState(
       {
@@ -31,6 +32,7 @@ class LyricRow extends React.Component {
   // should have a link here to the annoataion page
   render() {
     let buttonClass = this.state.clicked ? "yellowButton" : "";
+    let linkClass = "greyButton";
     // from here should be able to render another link
     // check if it is a link 
     let isLink = false;
@@ -48,14 +50,14 @@ class LyricRow extends React.Component {
             }
         }   
     }
-    console.log(isLink);
     // if isLink True 
     // want to Link path="/annoatations/annotation_id"
+    let checkType = isLink ?  <button className={linkClass} onClick={this.handleClick}>{this.props.lyrics}</button> :  <button className={buttonClass} onClick={this.handleClick}>{this.props.lyrics}</button>
 
     let br = this.props.index % 7 === 0 ? <br></br> : " ";
     return (
       <>
-        <button className={buttonClass} onClick={this.handleClick}>{this.props.lyrics}</button>
+        {checkType}
         <br />
         {br}
       </>
