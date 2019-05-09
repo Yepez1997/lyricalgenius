@@ -15,6 +15,15 @@ class Annotations extends React.Component {
         super(props);
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.annotationId !== this.props.match.params.annotationId) {
+            this.props.fetchAnnotation(this.props.match.params.annotationId).then((payload) => {
+              this.props.fetchSong(payload.annotation.song_id)
+        });
+    }
+  }
+
+  
     componentDidMount() {
         this.props.fetchAnnotation(this.props.match.params.annotationId).then((payload) => {
             this.props.fetchSong(payload.annotation.song_id)
@@ -67,7 +76,9 @@ class Annotations extends React.Component {
     // console.log(songLyrics);
     const lyricRows = songLyrics.map((lyrics, index) => {
         return (
-          <LyricRow key={index}
+          <LyricRow 
+          key={index}
+          annotations={this.props.song.annotations}
           index={index}
           receiveLink={this.props.receiveLink}
           removeLink={this.props.removeLink}

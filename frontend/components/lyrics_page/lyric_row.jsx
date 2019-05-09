@@ -31,9 +31,9 @@ class LyricRow extends React.Component {
   }
 
   // should have a link here to the annoataion page
+  // need to get
   render() {
     let buttonClass = this.state.clicked ? "yellowButton" : "";
-    let linkClass = "greyButton";
     // from here should be able to render another link
     // check if it is a link 
     let isLink = false;
