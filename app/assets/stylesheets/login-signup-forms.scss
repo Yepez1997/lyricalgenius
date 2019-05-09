@@ -28,12 +28,18 @@
     background-color: #ccc;
 }
 
+
+
 .login-input {
   border: 2px solid gray;
   padding: 1px;
   border-color:.15rem solid #ccc;
   width: 100%;
   height: 35px;
+}
+
+.login-input::selection {
+    background-color: #b2d7fe;
 }
 
 .login-welcome {

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 // FIXME: REFRACTOR CODE 
 const ArtistsFooterNav = () => (
     <>
@@ -16,7 +17,9 @@ const ArtistsFooterNav = () => (
         <footer className="artists-footer">
             <ul className="footer-artist-links">
                 <div className="verified-artist">
-                <li><a href="#">Verified Artists</a></li>
+                <Link to="/artists">
+                    <li>Verified Artists</li>
+                </Link>
                 </div>
                 <div className="all-artists">
                 <span> All Artists </span>

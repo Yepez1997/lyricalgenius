@@ -1,0 +1,31 @@
+
+.main {
+    background-color: black;
+    font-family: Programme, sans-serif;
+    height: -webkit-fill-available;
+    padding: 100px;
+
+
+}
+
+.artist-header-h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.artist-name {
+    color: #5BA7C2;
+    list-style-type: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.artist-name:hover {
+    cursor: pointer;
+    color: #ffff64;
+}
+
+.verified-artist {
+    list-style-type: none;
+}

@@ -1,10 +1,13 @@
 import react from 'react';
 
+
 const ArtistFooterLinks = () => (
      <footer className="artists-footer">
             <ul className="footer-artist-links">
                 <div className="verified-artist">
-                <li><a href="#">Verified Artists</a></li>
+                <Link to="/artists">
+                    <li>Verified Artist</li>
+                </Link>
                 </div>
                 <div className="all-artists">
                 <span> All Artists </span>

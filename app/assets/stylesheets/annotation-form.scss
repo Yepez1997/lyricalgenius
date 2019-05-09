@@ -24,9 +24,9 @@ textarea {
 
 .save {
     font-family: Programme, sans-serif;
-    border: 3px solid #38ef51;
+    border: 3px solid #0ecb27;
     padding: 3px;
-    color: #38ef51;
+    color: #0ecb27;
 }
 
 .save:hover {
@@ -48,3 +48,31 @@ textarea {
     
 }
 
+textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px #0ecb27;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #0ecb27;
+}
+
+.search-input > input {
+  outline: none;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+}

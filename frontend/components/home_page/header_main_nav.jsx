@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import  UserStateContainer from '../user_state/user_state_container';
+import SearchContainer from '../search_bar/search';
 
 const HeaderMainNav = ({currentUser, logout, modal}) => {
   //TODO: ADD TO CHANGE
@@ -22,7 +23,7 @@ const HeaderMainNav = ({currentUser, logout, modal}) => {
   return (  
     <header className="genius-header">
       <div className="search-input">
-        <input type="text" value="" placeholder="Search Lyrics & More" />
+        <SearchContainer/>
       </div>
       <div className="logo-link">
         <Link to="/" className="logo-link">
