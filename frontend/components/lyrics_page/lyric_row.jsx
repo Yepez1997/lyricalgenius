@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 // want to fetch the annoations 
 class LyricRow extends React.Component {
@@ -52,7 +53,7 @@ class LyricRow extends React.Component {
     }
     // if isLink True 
     // want to Link path="/annoatations/annotation_id"
-    let checkType = isLink ?  <button className={linkClass} onClick={this.handleClick}>{this.props.lyrics}</button> :  <button className={buttonClass} onClick={this.handleClick}>{this.props.lyrics}</button>
+    let checkType = isLink ?  <div className="fix-margins"><Link to={`/annotations/${annotation_id}`}>{this.props.lyrics}</Link></div>: <button className={buttonClass} onClick={this.handleClick}>{this.props.lyrics}</button>
 
     let br = this.props.index % 7 === 0 ? <br></br> : " ";
     return (
