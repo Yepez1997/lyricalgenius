@@ -5,3 +5,12 @@ export const createLink = (link) => (
     data: {link}
   })
 );
+
+
+export const receiveLinks = (links) => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/links'
+  })
+);
+

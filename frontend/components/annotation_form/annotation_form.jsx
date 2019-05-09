@@ -23,9 +23,9 @@ class AnnotationForm extends React.Component {
     handleCancel() {
         // make a dispatch to remove all links in the state
         // want to change the color back
-        this.props.links.forEach((link) => {
-            document.getElementById(link).style.backgroundColor = "white";
-        })
+        // this.props.links.forEach((link) => {
+        //     document.getElementById(link).style.backgroundColor = "white";
+        // })
         this.props.removeLinks();
         // push to history slice 
         this.props.history.push(`/songs/${this.state.song_id}`);

@@ -23,9 +23,14 @@ export const removeLink = (link_id) => ({
 
 export const removeLinks = () => ({
     type: REMOVE_LINKS
-})
+});
+
 export const createLink = (link) => dispatch => (
     LinkAPIUtil.createLink(link).then((link) => dispatch(receiveLink(link)))
-);
+)
+
+// export const fetchLinks = () => (
+//     LinkAPIUtil.fetchLinks().then((links) => dispatch(fetchLinks()))
+// )
 
 
