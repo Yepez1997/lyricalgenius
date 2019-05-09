@@ -12,6 +12,12 @@ import LyricRow from "./lyric_row";
 
 class Lyrics extends React.Component {
   
+  componentDidUpdate(prevProps) {
+      if (prevProps.match.params.songId !== this.props.match.params.songId) {
+          this.props.fetchSong(this.props.match.params.songId);
+      }
+  }
+
   componentDidMount() {
     this.props.fetchSong(this.props.match.params.songId);
     this.props.removeLinks();
