@@ -21,12 +21,12 @@ class SearchBar extends React.Component {
     this.props.fetchSongs();
   }
 
-//   componentWillReceiveProps(nextProps) {
-//     this.setState({
-//         filtered_artist: nextProps.artists,
-//         filtered_song: nextProps.songs
-//     });
-// }
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+        filtered_artist: nextProps.artists,
+        filtered_song: nextProps.songs
+    });
+}
 
   handleChange(event) {
     this.setState({ val: event.target.value });  
@@ -34,11 +34,9 @@ class SearchBar extends React.Component {
     let newArtistList = [];
     let currentSongList = [];
     let newSongList = [];
-    debugger 
     if (this.state.val !== "") {
         currentArtistList = this.props.artists;
         currentSongList = this.props.songs;
-        debugger
         newArtistList = currentArtistList.filter((artist) => {
             const lc = artist.toLowerCase();
             const filter = this.state.val.toLowerCase();
@@ -50,7 +48,6 @@ class SearchBar extends React.Component {
             return lc.includes(filter);
          });
         } else {
-            debugger 
             newSongList = this.props.songs;
             newArtistList = this.props.artists;
         }
@@ -77,8 +74,19 @@ class SearchBar extends React.Component {
                 return (
                         <li key={item}>
                         {item}</li>)});
-                                
 
+    let h1filteredSongs = filteredSongs ?  <h1 className="search-info"> Songs </h1> : " ";
+    let h1filteredArtists = filteredArtists ?  <h1 className="search-info"> Artists </h1> : " ";
+    let search = " ";
+    if (this.state.val != 0) {
+        search = <ul className="search">
+           <h1 className="search-header"> Search Results </h1>
+           {h1filteredSongs}
+           {filteredSongs}
+           <h1 className="search-info"> Artists </h1>
+           {filteredArtists}
+         </ul>;
+    }
     return (
       <>
         <input
@@ -87,13 +95,7 @@ class SearchBar extends React.Component {
           type="text"
           placeholder="Search Lyrics & More"
         />
-        <ul className="search">
-          <h1 className="search-header"> Search Results </h1>
-          <h1 className="search-info"> Songs </h1>
-          {filteredSongs}
-          <h1 className="search-info"> Artists </h1>
-          {filteredArtists}
-        </ul>
+        {search}
       </>
     );
   }
