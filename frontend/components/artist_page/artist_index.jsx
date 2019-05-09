@@ -12,7 +12,6 @@ class ArtistIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchArtists();
     }
 

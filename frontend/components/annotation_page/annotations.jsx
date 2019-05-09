@@ -25,12 +25,14 @@ class Annotations extends React.Component {
 
   
     componentDidMount() {
+        debugger
         this.props.fetchAnnotation(this.props.match.params.annotationId).then((payload) => {
             this.props.fetchSong(payload.annotation.song_id)
         });
     }
 
     render() {
+      debugger
         if(!this.props.annotation) {
             return null;
         }

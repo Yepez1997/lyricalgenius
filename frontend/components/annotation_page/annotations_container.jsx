@@ -9,12 +9,18 @@ import { removeLink } from "../../actions/links_actions";
 // and link to its llink
 
 const mapStateToProps = (state, ownParams) => {
-  return {
+  const annotation =
+    state.entities.annotations[ownParams.match.params.annotationId];
+  let song;
+  if (annotation) {
+    song = state.entities.songs[annotation.song_id];
+  } else {
+    song = null;
+  }
+  const currentUser = state.entities.users[state.session.id];
   //TODO: figure this out
-  annotation: state.entities.annotations[ownParams.match.params.annotationId],
-  song: state.entities.songs[state.entities.annotations[ownParams.match.params.annotationId].song_id],
-  currentUser: state.entities.users[state.session.id]
-}};
+  return { annotation, song, currentUser}
+};
 
 // 
 const mapDispatchToProps = (dispatch) => ({

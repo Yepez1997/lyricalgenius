@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import  UserStateContainer from '../user_state/user_state_container';
-import SearchContainer from '../search_bar/search';
+import SearchContainer from '../search_bar/search_container';
 
 const HeaderMainNav = ({currentUser, logout, modal}) => {
   //TODO: ADD TO CHANGE

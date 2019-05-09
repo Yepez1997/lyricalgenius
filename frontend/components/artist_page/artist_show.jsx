@@ -17,6 +17,11 @@ class ArtistShow extends React.Component {
             return null;
         }
 
+        // if (isNaN(parseInt(this.props.match.params.artistId))) {
+        //     return <AristLetterContainer />
+        // } else {
+        //     return <RegularArtistShow />
+        // }
         return (
             <h1> HEREEEE </h1>
         )

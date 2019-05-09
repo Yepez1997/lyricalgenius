@@ -7,6 +7,7 @@
     json.links @annotation.links do |link|
         json.link link.link 
     end
+    json.link_ids @annotation.link_ids
 
 #FIXME: remove if statement if broken 
 

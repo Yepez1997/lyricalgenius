@@ -37,23 +37,35 @@ class LyricRow extends React.Component {
     // from here should be able to render another link
     // check if it is a link 
     let isLink = false;
-    let annotation_id = 0;
+    let annotation_id;
     for (let i = 0; i < this.props.annotations.length; i++) {
-        annotation_id = this.props.annotations[i].annotation;
+        let curr_annotation_id = this.props.annotations[i].annotation;
         // now look at links 
         let links_len = this.props.annotations[i].links.length;
         for (let j = 0; j < links_len; j++) {
             if (parseInt(this.props.annotations[i].links[j].link) === parseInt(this.props.index)) {
-                annotation_id = this.props.annotations[i].annotation;
+                annotation_id = curr_annotation_id;
                 // change the state of this now that we found it exists in our list 
                 isLink = true;
                 break;
             }
         }   
+
+        if (annotation_id) break;
     }
+
     // if isLink True 
     // want to Link path="/annoatations/annotation_id"
-    let checkType = isLink ?  <div className="fix-margins"><Link to={`/annotations/${annotation_id}`}>{this.props.lyrics}</Link></div>: <button className={buttonClass} onClick={this.handleClick}>{this.props.lyrics}</button>
+    let checkType = isLink ?  (
+      <div className="fix-margins">
+        <Link to={`/annotations/${annotation_id}`}>
+          {this.props.lyrics}
+        </Link>
+      </div>
+     ) : (
+       <button className={buttonClass} onClick={this.handleClick}>{this.props.lyrics}
+       </button>
+     );
 
     let br = this.props.index % 7 === 0 ? <br></br> : " ";
     return (

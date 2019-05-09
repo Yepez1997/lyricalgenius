@@ -1,7 +1,7 @@
 import React from 'react'; 
 import TopCharts from "./top_charts";
 import { connect } from 'react-redux';
-import { fetchSongs } from "../../actions/song_actions"
+import { fetchSongs } from "../../actions/song_actions";
 
 // the objects im passisng in are arrays convert to pojos 
 const mapStateToProps = (state) => ({

@@ -13,12 +13,7 @@ class TopCharts extends React.Component {
       this.props.fetchSongs();
     }
 
-
-
-    //<Link to=`/songs/${song.id}`> {song.title } </Link>
     render() {
-        //TODO: HOW TO FETCH FEW DATA 
-        // TODO: AWS -> 
         const songs = this.props.songs.map((song, index) => {
           let verified = song.artist_verified ? '✅' : " ";
           return (

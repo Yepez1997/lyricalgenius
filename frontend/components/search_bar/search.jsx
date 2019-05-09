@@ -1,38 +1,102 @@
 import React from 'react';
 
 //TODO: REPLACE WITH INPUT IN HEADER MAIN NAV
-class Search extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            filtered: [],
-            value: "",
-            artists: this.props.artists,
-            songs: this.props.songs,
-        };
-        this.handleChange = this.handleChange.bind(this);
+class SearchBar extends React.Component {
+  constructor(props) {
+    super(props);
+    // filtered should be a combo of both artist and songs
+    this.state = {
+        val: "",
+        filtered_song: [],
+        filtered_artist: [],
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+
+  componentDidMount() {
+    //this.props.fetchSongs;
+    // fetch the artists and convert them to their names only
+    this.props.fetchArtists();
+    this.props.fetchSongs();
+  }
+
+//   componentWillReceiveProps(nextProps) {
+//     this.setState({
+//         filtered_artist: nextProps.artists,
+//         filtered_song: nextProps.songs
+//     });
+// }
+
+  handleChange(event) {
+    this.setState({ val: event.target.value });  
+    let currentArtistList = [];
+    let newArtistList = [];
+    let currentSongList = [];
+    let newSongList = [];
+    debugger 
+    if (this.state.val !== "") {
+        currentArtistList = this.props.artists;
+        currentSongList = this.props.songs;
+        debugger
+        newArtistList = currentArtistList.filter((artist) => {
+            const lc = artist.toLowerCase();
+            const filter = this.state.val.toLowerCase();
+            return lc.includes(filter);
+         });
+        newSongList = currentSongList.filter((song) => {
+            const lc = song.toLowerCase();
+            const filter = this.state.val.toLowerCase();
+            return lc.includes(filter);
+         });
+        } else {
+            debugger 
+            newSongList = this.props.songs;
+            newArtistList = this.props.artists;
+        }
+        this.setState({
+            filtered_artist: newArtistList,
+            filtered_song: newSongList
+        });
     }
 
-    componentDidMount() {
-        this.props.fetchSongs;
-        this.props.fetchArtists;
-        debugger 
+  render() {
+
+    if (!this.props.artists) {
+        return null;
     }
 
- 
-    handleChange(event) {
-        this.setState({ value: event.target.value });
+    if (!this.props.songs) {
+        return null;
     }
-    
+    const filteredArtists = this.state.filtered_artist.map(item => {
+        return (<li key={item}>
+                    {item}</li>)});
 
-    render() {
-        return (
-            <input onChange={this.handleChange} 
-            type="text" 
-            value={this.state.value} 
-            placeholder="Search Lyrics & More" />
-       );
-    }
+    const filteredSongs = this.state.filtered_song.map(item => {
+                return (
+                        <li key={item}>
+                        {item}</li>)});
+                                
+
+    return (
+      <>
+        <input
+          onChange={this.handleChange}
+          value={this.state.val}
+          type="text"
+          placeholder="Search Lyrics & More"
+        />
+        <ul className="search">
+          <h1 className="search-header"> Search Results </h1>
+          <h1 className="search-info"> Songs </h1>
+          {filteredSongs}
+          <h1 className="search-info"> Artists </h1>
+          {filteredArtists}
+        </ul>
+      </>
+    );
+  }
 }
 
-export default Search;
+export default SearchBar;
