@@ -18,9 +18,11 @@ Lyrical Genius supports the current features
     - The proper lyrics for a song are displayed and rendered into rows of Components
 
 ## Core Functionality (In Depth)
-
+ ### HomePage
 ![Home Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%209.51.08%20AM.png)
+### Search Bar
 ![Search Bar](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%209.51.23%20AM.png)
+### Lyrics Page
 ![Lyrics Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%209.58.28%20AM.png)
 
 
