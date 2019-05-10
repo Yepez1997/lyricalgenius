@@ -256,8 +256,8 @@ ul>li {
     position: relative;
     z-index: 10;
     margin-top: 10px;
-    width: 105%;
-    margin-left: -8px;
+    width: 110%;
+    font-family: Programme, sans-serif;
 }
 
 .search-info {
@@ -269,4 +269,9 @@ ul>li {
 .search-header {
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
+}
+
+ .search-info > h1{
+    border-bottom: 1px solid #ccc;
+
 }
