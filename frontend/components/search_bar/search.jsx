@@ -86,7 +86,7 @@ class SearchBar extends React.Component {
            <h1 className="search-header"> Search Results </h1>
            {h1filteredSongs}
            {filteredSongs}
-           <h1 className="search-info"> Artists </h1>
+           {h1filteredArtists}
            {filteredArtists}
          </ul>;
     }
