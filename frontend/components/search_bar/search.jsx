@@ -68,13 +68,12 @@ class SearchBar extends React.Component {
     }
     const filteredArtists = this.state.filtered_artist.map((item, index) => {
            return (
-                    index < 4 ? (<li key={item}>{item}</li>) : " " 
-                        
+                    index < 4 ? (<li className="filtered" key={item}>{item}</li>) : " "      
                 )});
 
     const filteredSongs = this.state.filtered_song.map((item, index) => {
                 return (
-                        index < 4 ? (<li key={item}>{item}</li>) : " " 
+                        index < 4 ? (<li className="filtered" key={item}>{item}</li>) : " " 
                         
                 )});
 
