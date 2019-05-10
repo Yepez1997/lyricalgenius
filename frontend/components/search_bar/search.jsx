@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 //TODO: REPLACE WITH INPUT IN HEADER MAIN NAV
 class SearchBar extends React.Component {
   constructor(props) {
@@ -11,6 +11,8 @@ class SearchBar extends React.Component {
         filtered_artist: [],
     };
     this.handleChange = this.handleChange.bind(this);
+    this.findArtistId = this.findArtistId.bind(this);
+    this.findSongId = this.findSongId.bind(this);
   }
 
 
@@ -26,7 +28,17 @@ class SearchBar extends React.Component {
         filtered_artist: nextProps.artists,
         filtered_song: nextProps.songs
     });
-}
+    }
+
+    findArtistId(artist) {
+        return this.props.artist_list.filter(el => el.name == artist)[0].id;
+    }
+
+    findSongId(song) {
+       return this.props.songs_list.filter(el => el.title == song)[0].id;
+    }
+
+
 
   handleChange(event) {
     this.setState({ val: event.target.value });  
@@ -66,14 +78,28 @@ class SearchBar extends React.Component {
     if (!this.props.songs) {
         return null;
     }
+
+    
+    if (!this.props.songs_list) {
+        return null;
+    }
+
+    if (!this.props.artist_list) {
+        return null;
+    }
+
+    // Find the id ... 
     const filteredArtists = this.state.filtered_artist.map((item, index) => {
+           let artistId = this.findArtistId(item);
            return (
-                    index < 4 ? (<li className="filtered" key={item}>{item}</li>) : " "      
+                    index < 4 ? (<li className="filtered" key={item}><Link to={`/artists/${artistId}`}>{item}</Link></li>) : " "      
                 )});
 
     const filteredSongs = this.state.filtered_song.map((item, index) => {
+                // want to find song id 
+                let songId = this.findSongId(item);
                 return (
-                        index < 4 ? (<li className="filtered" key={item}>{item}</li>) : " " 
+                        index < 4 ? (<li className="filtered" key={item}><Link to={`/songs/${songId}`}>{item}</Link></li>) : " " 
                         
                 )});
 

@@ -5,8 +5,11 @@ import SearchBar from "./search";
 
 const mapStateToProps = (state) => ({
     songs: Object.keys(state.entities.songs).map((id) => state.entities.songs[id].title),
-    artists: Object.keys(state.entities.artists).map((id) => state.entities.artists[id].name)
+    artists: Object.keys(state.entities.artists).map((id) => state.entities.artists[id].name),
+    songs_list: Object.keys(state.entities.songs).map((id) => state.entities.songs[id]),
+    artist_list: Object.keys(state.entities.artists).map((id) => state.entities.artists[id])
 });
+
 
 const mapDispatchToProps = dispatch => ({
   fetchArtists: () => dispatch(fetchArtists()),
