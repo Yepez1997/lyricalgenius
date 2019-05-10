@@ -7,5 +7,15 @@ Lyrical Genius is a clone of Genius.com - previously known as RapGenius.com. Use
 
 Within a two week time frame a lot of tasks were accomplished - such include the features mentioed above. Note inorder to start annotating, you must be signed in !
 
+***
 
+## Features
+Lyrical Genius supports the current features 
+  * Search 
+    - A User (signed in or not) is able to search any song or artist in the current database
+  * Song Annotations
+    - Signed in users are able to make annotations on a song
+  * Lyrics Page
+    - The proper lyrics for a song are displayed and rendered into rows of Components
+   
 
