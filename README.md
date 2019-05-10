@@ -23,7 +23,7 @@ Lyrical Genius supports the current features
 ### Search Bar
 ![Search Bar](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%209.51.23%20AM.png)
 ### Lyrics Page
-![Lyrics Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%209.58.28%20AM.png)
+![Lyrics Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%2011.15.36%20AM.png)
 
 
 ## Technologies 
