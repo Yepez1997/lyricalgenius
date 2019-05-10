@@ -1,5 +1,8 @@
-import React from 'react';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import HeaderMainNavContainer from "../home_page/header_main_nav_container";
+import HeaderInfoNav from "../home_page/header_info_nav";
+import Modal from "../modal/modal";
 
 class ArtistShow extends React.Component {
     constructor(props) {
@@ -23,7 +26,22 @@ class ArtistShow extends React.Component {
         //     return <RegularArtistShow />
         // }
         return (
-            <h1> HEREEEE </h1>
+            <>
+            <Modal/>
+            <HeaderMainNavContainer />
+            <HeaderInfoNav /> 
+            <div className="artist-header"> 
+                <img src={this.props.artist.photo}/>
+                <div className="artist-container">
+                <div className="album-image-artist"> 
+                    <img src={this.props.artist.photo} />
+                </div>
+                <div className="album-info"> 
+                    <h1> HERE  </h1>
+                </div>
+                </div>
+            </div>
+        </>
         )
     }
 }

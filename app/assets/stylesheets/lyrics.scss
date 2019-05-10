@@ -86,7 +86,7 @@
     //object-fit: cover
     background-size: contain;
     //opacity: 0.8; 
-    filter: brightness(40%);
+    filter: brightness(0%);
     
 }
 
@@ -100,7 +100,6 @@
     //position: relative;
     background-size: contain;
     border: solid black 1px;
-   
 
 }
 
@@ -183,3 +182,21 @@
 }
 
 
+
+.album-image-artist {
+    //position: relative;
+    background-size: contain;
+
+}
+
+.album-image-artist > img {
+    position: absolute;
+    object-fit: contain;
+    //max-height: 25%;
+    height: 220px;
+    margin-top: 5%;
+    top: -20%;
+    left: 20%;
+    border: 4px solid #0ecb27;
+    border-radius: 100%;
+}
