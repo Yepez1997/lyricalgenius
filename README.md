@@ -1,24 +1,21 @@
-# README
+# Lyrical Genius
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+[Live Demo](https://lyrical-genius-6.herokuapp.com/#/)
 
-* Ruby version
+Lyrical Genius is a clone of Genius.com - previously known as RapGenius.com. Users are able to highlight over selected lyrics, and add comments over the song lyric to add connotation and to the lyric - in respect to the song. That being said, Lyrical Genius supports the current features: Song annotations, links to Lyrics Page, and Search. These features are amongst Genius.com's most popular features. 
 
-* System dependencies
+Within a two week time frame a lot of tasks were accomplished - such include the features mentioed above. Note inorder to start annotating, you must be signed in !
 
-* Configuration
+***
 
-* Database creation
+## Features
+Lyrical Genius supports the current features 
+  * Search 
+    - A User (signed in or not) is able to search any song or artist in the current database
+  * Song Annotations
+    - Signed in users are able to make annotations on a song
+  * Lyrics Page
+    - The proper lyrics for a song are displayed and rendered into rows of Components
+   
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
