@@ -10,7 +10,7 @@
 .artist-header::before{
     background: linear-gradient(to bottom,rgba(0,0,0,.4) 0,rgba(0,0,0,.65) 70%);
     content: " ";
-    background-color: black;
+    background-color: rgb(236, 208, 208);
     position: relative;
     animation: fade_in_background_image .75s both;
 }
@@ -86,7 +86,7 @@
     //object-fit: cover
     background-size: contain;
     //opacity: 0.8; 
-    filter: brightness(0%);
+    filter: brightness(50%);
     
 }
 
@@ -199,4 +199,24 @@
     left: 20%;
     border: 4px solid #0ecb27;
     border-radius: 100%;
+}
+
+.artist-header-artists > img {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    //object-fit: cover
+    background-size: contain;
+    //opacity: 0.8; 
+    filter: brightness(0%);
+    
+}
+
+
+.artist-header-artists {
+    padding: 0 0 1.5rem 0;
+    position: relative;
+    height: 280px;
+    max-height: 20%;
+    width: 100%
 }

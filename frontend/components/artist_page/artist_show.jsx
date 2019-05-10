@@ -30,7 +30,7 @@ class ArtistShow extends React.Component {
             <Modal/>
             <HeaderMainNavContainer />
             <HeaderInfoNav /> 
-            <div className="artist-header"> 
+            <div className="artist-header-artists"> 
                 <img src={this.props.artist.photo}/>
                 <div className="artist-container">
                 <div className="album-image-artist"> 
