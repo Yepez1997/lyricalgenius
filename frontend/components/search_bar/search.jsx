@@ -75,8 +75,8 @@ class SearchBar extends React.Component {
                         <li key={item}>
                         {item}</li>)});
 
-    let h1filteredSongs = filteredSongs ?  <h1 className="search-info"> Songs </h1> : " ";
-    let h1filteredArtists = filteredArtists ?  <h1 className="search-info"> Artists </h1> : " ";
+    let h1filteredSongs = filteredSongs.length > 0 ?  <h1 className="search-info"> Songs </h1> : " ";
+    let h1filteredArtists = filteredArtists.length > 0 ?  <h1 className="search-info"> Artists </h1> : " ";
     let search = " ";
     if (this.state.val != 0) {
         search = <ul className="search">
