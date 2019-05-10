@@ -25,3 +25,4 @@ Lyrical Genius supports the current features
 
 
 ## Technologies 
+LyricaLl Genius was built with the following technologies: React JS (frontend), Ruby on Rails (backend), Postgres (backend database), and Amazon Web Services (image storage), 
