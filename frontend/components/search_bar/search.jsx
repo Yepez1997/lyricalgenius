@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
     }
 
     findArtistId(artist) {
-        return this.props.artist_list.filter(el => el.name == artist)[0].id;
+        return this.props.artist_list.filter(el => el.name == artist)[0];
     }
 
     findSongId(song) {
@@ -90,9 +90,9 @@ class SearchBar extends React.Component {
 
     // Find the id ... 
     const filteredArtists = this.state.filtered_artist.map((item, index) => {
-           let artistId = this.findArtistId(item);
+           let artist = this.findArtistId(item);
            return (
-                    index < 4 ? (<li className="filtered" key={item}><Link to={`/artists/${artistId}`}>{item}</Link></li>) : " "      
+                    index < 4 ? (<li className="filtered" key={item}><img className="search-img-artist" src={artist.photo}></img><Link to={`/artists/${artist.id}`}>{item}</Link></li>) : " "      
                 )});
 
     const filteredSongs = this.state.filtered_song.map((item, index) => {

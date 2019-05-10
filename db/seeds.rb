@@ -18,11 +18,19 @@ ActiveRecord::Base.transaction do
     scorpion_file_item = open('https://s3-us-west-1.amazonaws.com/seed-lyrical-genius/scorpion.jpg')
     eminem_til_collapse_file = open('https://s3-us-west-1.amazonaws.com/seed-lyrical-genius/tilICollpase.jpg')
     kamikazi_file = open('https://s3-us-west-1.amazonaws.com/seed-lyrical-genius/lucky_you.jpg')
+    kids_see_ghost_pp = open('https://s3-us-west-1.amazonaws.com/seed-lyrical-genius/kidseeeeghost.png')
+    drake_pp = open('https://s3-us-west-1.amazonaws.com/seed-lyrical-genius/draakke.jpg')
+    eminem_po = open('https://s3-us-west-1.amazonaws.com/seed-lyrical-genius/eminem.jpg')
+
     # Artists
     Artist.destroy_all
     drake = Artist.create!({name: "Drake", is_verified: true})
     kids_see_ghosts = Artist.create!({name: "Kids See Ghosts", is_verified: true})
     eminem = Artist.create!({name:"Eminem", is_verified:true})
+    #photo attached 
+    eminem.photo.attach(io:eminem_po, filename:'eminem.jpg' )
+    drake.photo.attach(io:drake_pp, filename:'drake.jpg')
+    kids_see_ghosts.photo.attach(io:kids_see_ghost_pp, filename:'drake.jpg')
 
 
     # Albums 

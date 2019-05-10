@@ -284,8 +284,22 @@ ul>li {
 
 .filtered:hover {
     background-color: #ccc;
+    object-fit: fill;
 }
 
 .search-img {
     margin-right: 5px;
+    padding: 10px;
+}
+
+.search-img-artist {
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.filtered {
+    display: flex;
+    flex-direction: row;
+
+ 
 }
