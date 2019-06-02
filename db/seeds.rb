@@ -58,7 +58,7 @@ require 'open-uri'
     kendrick = Artist.create({name: "Kendrick Lamar", is_verified: true})
     riri = Artist.create({name: "Rihanna", is_verified:true})
     weeknd = Artist.create({name: "The Weeknd", is_verified: true})
-    nipsey = Artist.create({name:"Nipsey Hussel", is_verified: true })
+    nipsey = Artist.create({name:"Nipsey Hussle", is_verified: true })
     roy_woods = Artist.create({name: "Roy Woods", is_verified:true})
     #photo attached 
     eminem.photo.attach(io:eminem_po, filename:'eminem.jpg' )

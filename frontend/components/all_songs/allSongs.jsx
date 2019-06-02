@@ -38,6 +38,9 @@ class AllSongs extends React.Component {
         <HeaderMainNavContainer/>   
         <HeaderInfoNav/>
         <div className="songInfo-box">{songs}</div>;
+        <div className="tempFooter"> 
+            <p> TEMP </p>
+        </div>
         </>
     )
   }

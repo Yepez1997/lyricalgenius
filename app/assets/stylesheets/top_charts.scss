@@ -1,8 +1,8 @@
 .songInfo-box {
     position: absolute;
-    top: 20%;
+    top: 14%;
     width: 60%;
-    margin: 0 20%;
+    margin: 5% 20%;
     font-family: Programme, sans-serif;
     border-top: solid .15rem #000;
 }
@@ -14,6 +14,7 @@
     align-items: center;
     border-bottom: solid 1px #ccc;
     padding: 0 1rem;
+    box-sizing: border-box;
     // padding:0 1rem;
     // width: fit-content;
 }
@@ -30,6 +31,7 @@
 
 .songInfo-number {
     align-self: center;
+    font-size: 10px;
 }
 
 
@@ -63,6 +65,10 @@
 //     background-color: red;
 // }
 
+.li > .songInfo-number:nth-child(-n+5) {
+    background-color: red;
+}
+
 
 .songInfo-name {
     width: 57vw;
@@ -88,4 +94,15 @@ li > img {
     height: 60px;
     width: 60px;
     margin-bottom: -14px;
+}
+
+.tempFooter {
+    position: fixed;
+    display: block;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+
 }
