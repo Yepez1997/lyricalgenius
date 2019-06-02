@@ -1,12 +1,9 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
-
-// function ArtistLetterShow(props) {
-
-//     return (
-//         <h1> HERE </h1> 
-//     )
-// }
+import HeaderMainNavContainter from "../home_page/header_main_nav_container";
+import HeaderInfoNav from "../home_page/header_info_nav";
+import ArtistsFooterNav from "../home_page/artists_footer_nav";
+import Modal from "../modal/modal";
+import {Link} from 'react-router-dom';
 
 class ArtistLetterShow extends React.Component {
 
@@ -14,6 +11,17 @@ class ArtistLetterShow extends React.Component {
         super(props);
         this.state = {filteredArtists: []}
         this.filterArtists = this.filterArtists.bind(this);
+    }
+
+    componentDidUpdate(prevProps) {
+        debugger 
+        if (prevProps.letter !== this.props.letter) {
+            // this.props.
+            //this.props.history.push(`/artists/${this.props.letter}`)
+            this.props.fetchArtists().then(() => 
+            this.setState({filteredArtists: []}))
+        }
+        debugger 
     }
 
     componentDidMount() {
@@ -39,15 +47,27 @@ class ArtistLetterShow extends React.Component {
             return null;
         }
         let filtered = this.filterArtists(this.props.artists);
-        console.log(filtered)
-        //this.setState({filteredArtists: filtered})
-        // let allFilteredArtists = this.state.filteredArtists.map(artist => 
-        //     (<li key={artist.id}> {artist.name} </li>)
-        // )
-
+        const artists = filtered.map((artist) => {
+            return (
+                <Link to={`/artists/${artist.id}`}>
+                <li key={artist.id} className="artist-name" key={artist.id}> {artist.name} </li>
+                </Link>
+            );
+        });
         return (
-            <h1>  here </h1>   
-        )
+          <>
+            <Modal/>
+            <header>
+              <HeaderMainNavContainter />
+              <HeaderInfoNav />
+              <ArtistsFooterNav />
+            </header>
+            <div className="main">
+              <h1 className="artist-header-h1"> Most Popular {this.props.letter} Artists </h1>
+              <ul>{artists}</ul>
+            </div>
+          </>
+        );
     }
 }
 

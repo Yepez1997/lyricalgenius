@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-//TODO: REPLACE WITH INPUT IN HEADER MAIN NAV
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);

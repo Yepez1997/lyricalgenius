@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import {fetchArtists} from '../../actions/artist_actions';
 import {connect} from "react-redux";
 import ArtistLetterShow from './artist_letter_show';
@@ -13,4 +14,4 @@ const mapDispatchToProps = (dispatch) => ({
     fetchArtists: () => dispatch(fetchArtists())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ArtistLetterShow);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ArtistLetterShow));
