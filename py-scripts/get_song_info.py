@@ -18,8 +18,6 @@ def get_song_info(song_url):
 def get_song_artist_name(page):
     tree = html.fromstring(page.content)
     artist = tree.xpath('//div[@class="lyricsh"]/h2/b/text()')[0].split(' ')
-
-    # list comprehensions would be helpful w/ py 3.x 
     artist_name = []
     for i in artist:
         if not i == "Lyrics":

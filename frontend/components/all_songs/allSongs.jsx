@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
+import HeaderMainNavContainer from '../home_page/header_main_nav_container';
+import HeaderInfoNav from '../home_page/header_info_nav';
 
 class AllSongs extends React.Component {
   constructor(props) {
@@ -31,7 +33,13 @@ class AllSongs extends React.Component {
           </Link>
         );
     });
-    return <div className="songInfo-box">{songs}</div>;
+    return (
+        <>
+        <HeaderMainNavContainer/>   
+        <HeaderInfoNav/>
+        <div className="songInfo-box">{songs}</div>;
+        </>
+    )
   }
 }
 

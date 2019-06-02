@@ -34,9 +34,5 @@ const HeaderMainNav = ({currentUser, logout, modal}) => {
     </header>
     );
   };
-// need to get make a container to have access to state 
-// and get the modal function 
-// here we want to do if the current user exists use the log in log out features else 
-// replace thse with a log out button 
 
 export default HeaderMainNav;
