@@ -1,11 +1,11 @@
 import React from "react";
 import AristLetterShow from './artist_letter_show';
 import RegularArtistShow from './regular_artist_show';
+import ArtistLetterShowContainer from './artist_letter_show_container';
 
 class ArtistShow extends React.Component {
     constructor(props) {
         super(props)
-        // have a state with a letter 
         this.state = {
             letter: ""
         }
@@ -32,7 +32,8 @@ class ArtistShow extends React.Component {
             }
         }
         if (isArtistLetter) {
-            return <AristLetterShow artists={this.state.letter}/>
+            //return <AristLetterShow letter={this.state.letter}/>
+            return <ArtistLetterShowContainer letter={this.state.letter}/>
         } else {
             return <RegularArtistShow artists={this.props.artist}/>
         }
