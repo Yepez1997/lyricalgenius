@@ -22,82 +22,82 @@ const ArtistsFooterNav = () => (
           </div>
           <div className="artist-letters">
             <li>
-              <Link to={`/artists/A`}>A</Link>
+              <Link to={`/artistsSearch/A`}>A</Link>
             </li>
             <li>
-              <Link to={`/artists/B`}>B</Link>
+              <Link to={`/artistsSearch/B`}>B</Link>
             </li>
             <li>
-              <Link to={`/artists/C`}>C</Link>
+              <Link to={`/artistsSearch/C`}>C</Link>
             </li>
             <li>
-              <Link to={`/artists/D`}>D</Link>
+              <Link to={`/artistsSearch/D`}>D</Link>
             </li>
             <li>
-              <Link to={`/artists/E`}>E</Link>
+              <Link to={`/artistsSearch/E`}>E</Link>
             </li>
             <li>
-              <Link to={`/artists/F`}>F</Link>
+              <Link to={`/artistsSearch/F`}>F</Link>
             </li>
             <li>
-              <Link to={`/artists/G`}>G</Link>
+              <Link to={`/artistsSearch/G`}>G</Link>
             </li>
             <li>
-              <Link to={`/artists/H`}>H</Link>
+              <Link to={`/artistsSearch/H`}>H</Link>
             </li>
             <li>
-              <Link to={`/artists/I`}>I</Link>
+              <Link to={`/artistsSearch/I`}>I</Link>
             </li>
             <li>
-              <Link to={`/artists/J`}>J</Link>
+              <Link to={`/artistsSearch/J`}>J</Link>
             </li>
             <li>
-              <Link to={`/artists/K`}>K</Link>
+              <Link to={`/artistsSearch/K`}>K</Link>
             </li>
             <li>
-              <Link to={`/artists/L`}>L</Link>
+              <Link to={`/artistsSearch/L`}>L</Link>
             </li>
             <li>
-              <Link to={`/artists/M`}>M</Link>
+              <Link to={`/artistsSearch/M`}>M</Link>
             </li>
             <li>
-              <Link to={`/artists/N`}>N</Link>
+              <Link to={`/artistsSearch/N`}>N</Link>
             </li>
             <li>
-              <Link to={`/artists/O`}>O</Link>
+              <Link to={`/artistsSearch/O`}>O</Link>
             </li>
             <li>
-              <Link to={`/artists/P`}>P</Link>
+              <Link to={`/artistsSearch/P`}>P</Link>
             </li>
             <li>
-              <Link to={`/artists/Q`}>Q</Link>
+              <Link to={`/artistsSearch/Q`}>Q</Link>
             </li>
             <li>
-              <Link to={`/artists/R`}>R</Link>
+              <Link to={`/artistsSearch/R`}>R</Link>
             </li>
             <li>
-              <Link to={`/artists/S`}>S</Link>
+              <Link to={`/artistsSearch/S`}>S</Link>
             </li>
             <li>
-              <Link to={`/artists/T`}>T</Link>
+              <Link to={`/artistsSearch/T`}>T</Link>
             </li>
             <li>
-              <Link to={`/artists/U`}>U</Link>
+              <Link to={`/artistsSearch/U`}>U</Link>
             </li>
             <li>
-              <Link to={`/artists/V`}>V</Link>
+              <Link to={`/artistsSearch/V`}>V</Link>
             </li>
             <li>
-              <Link to={`/artists/W`}>W</Link>
+              <Link to={`/artistsSearch/W`}>W</Link>
             </li>
             <li>
-              <Link to={`/artists/X`}>X</Link>
+              <Link to={`/artistsSearch/X`}>X</Link>
             </li>
             <li>
-              <Link to={`/artists/Y`}>Y</Link>
+              <Link to={`/artistsSearch/Y`}>Y</Link>
             </li>
             <li>
-              <Link to={`/artists/Z`}>Z</Link>
+              <Link to={`/artistsSearch/Z`}>Z</Link>
             </li>
           </div>
         </ul>

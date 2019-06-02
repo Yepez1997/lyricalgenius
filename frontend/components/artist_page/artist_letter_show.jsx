@@ -14,11 +14,11 @@ class ArtistLetterShow extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.letter !== this.props.letter) {
-            // this.props.
-            //this.props.history.push(`/artists/${this.props.letter}`)
-            this.props.fetchArtists().then(() => 
-            this.setState({filteredArtists: []}))
+        if (prevProps.match.params.artistId !== prevProps.match.params.artistId ) {
+          // this.props.
+          //this.props.history.push(`/artists/${this.props.letter}`)
+          this.props.fetchArtists();
+          this.setState({filteredArtists: []})
         }
     }
 
@@ -33,7 +33,7 @@ class ArtistLetterShow extends React.Component {
             return null;
         }
         for (let i in artists) {
-            if (artists[i].name.slice(0,1).toLowerCase() === this.props.letter.toLowerCase()) {
+            if (artists[i].name.slice(0,1).toLowerCase() === this.props.match.params.artistId.toLowerCase()) {
                 filtered.push(artists[i]);
             }
         }
@@ -61,7 +61,7 @@ class ArtistLetterShow extends React.Component {
               <ArtistsFooterNav />
             </header>
             <div className="main">
-              <h1 className="artist-header-h1"> Most Popular {this.props.letter} Artists </h1>
+              <h1 className="artist-header-h1"> Most Popular {this.props.match.params.artistId} Artists </h1>
               <ul>{artists}</ul>
             </div>
           </>
