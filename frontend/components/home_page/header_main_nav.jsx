@@ -4,8 +4,6 @@ import  UserStateContainer from '../user_state/user_state_container';
 import SearchContainer from '../search_bar/search_container';
 
 const HeaderMainNav = ({currentUser, logout, modal}) => {
-  //TODO: ADD TO CHANGE
-
   const logOut = () => (
     <button className="modal-button" onClick={() => logout()}>Log Out</button>
   );
