@@ -14,14 +14,12 @@ class ArtistLetterShow extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        debugger 
         if (prevProps.letter !== this.props.letter) {
             // this.props.
             //this.props.history.push(`/artists/${this.props.letter}`)
             this.props.fetchArtists().then(() => 
             this.setState({filteredArtists: []}))
         }
-        debugger 
     }
 
     componentDidMount() {
