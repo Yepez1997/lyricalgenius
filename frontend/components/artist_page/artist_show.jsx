@@ -1,48 +1,41 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import HeaderMainNavContainer from "../home_page/header_main_nav_container";
-import HeaderInfoNav from "../home_page/header_info_nav";
-import Modal from "../modal/modal";
+import AristLetterShow from './artist_letter_show';
+import RegularArtistShow from './regular_artist_show';
 
 class ArtistShow extends React.Component {
     constructor(props) {
         super(props)
+        // have a state with a letter 
+        this.state = {
+            letter: ""
+        }
     }
 
     componentDidMount() {
-        this.props.fetchArtist(this.props.match.params.artistId);
-
+        if (!isNaN(parseInt(this.props.match.params.artistId))) {
+            this.props.fetchArtist(this.props.match.params.artistId);
+        } else {
+            this.setState({
+                letter: this.props.match.params.artistId
+            })
+        }
     }
 
-
     render() {
-        if (!this.props.artist) {
-            return null;
+        let isArtistLetter;
+        if (this.state.letter !== "") {
+            isArtistLetter = true
+        } else {
+            isArtistLetter = false; 
+            if (!this.props.artist) {
+                return null;
+            }
         }
-
-        // if (isNaN(parseInt(this.props.match.params.artistId))) {
-        //     return <AristLetterContainer />
-        // } else {
-        //     return <RegularArtistShow />
-        // }
-        return (
-            <>
-            <Modal/>
-            <HeaderMainNavContainer />
-            <HeaderInfoNav /> 
-            <div className="artist-header-artists"> 
-                <img src={this.props.artist.photo}/>
-                <div className="artist-container">
-                <div className="album-image-artist"> 
-                    <img src={this.props.artist.photo} />
-                </div>
-                <div className="album-info"> 
-                    <h1> HERE  </h1>
-                </div>
-                </div>
-            </div>
-        </>
-        )
+        if (isArtistLetter) {
+            return <AristLetterShow artists={this.state.letter}/>
+        } else {
+            return <RegularArtistShow artists={this.props.artist}/>
+        }
     }
 }
 

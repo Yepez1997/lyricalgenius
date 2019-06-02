@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-// FIXME: REFRACTOR CODE 
 const ArtistsFooterNav = () => (
     <>
     <footer className="footer">
@@ -25,32 +24,32 @@ const ArtistsFooterNav = () => (
                 <span> All Artists </span>
                 </div>
                 <div className="artist-letters">
-                <li><a href="#">A</a></li>
-                <li><a href="#">B</a></li>
-                <li><a href="#">C</a></li>
-                <li><a href="#">D</a></li>
-                <li><a href="#">E</a></li>
-                <li><a href="#">F</a></li>
-                <li><a href="#">G</a></li>
-                <li><a href="#">H</a></li>
-                <li><a href="#">I</a></li>
-                <li><a href="#">J</a></li>
-                <li><a href="#">K</a></li>
-                <li><a href="#">L</a></li>
-                <li><a href="#">M</a></li>
-                <li><a href="#">N</a></li>
-                <li><a href="#">O</a></li>
-                <li><a href="#">P</a></li>
-                <li><a href="#">Q</a></li>
-                <li><a href="#">R</a></li>
-                <li><a href="#">S</a></li>
-                <li><a href="#">T</a></li>
-                <li><a href="#">U</a></li>
-                <li><a href="#">V</a></li>
-                <li><a href="#">W</a></li>
-                <li><a href="#">X</a></li>
-                <li><a href="#">Y</a></li>
-                <li><a href="#">Z</a></li>
+                    <li><Link to={`/artists/A`}>A</Link></li>
+                    <li><Link to={`/artists/B`}>B</Link></li>
+                    <li><Link to={`/artists/C`}>C</Link></li>
+                    <li><Link to={`/artists/D`}>D</Link></li>
+                    <li><Link to={`/artists/E`}>E</Link></li>
+                    <li><Link to={`/artists/F`}>F</Link></li>
+                    <li><Link to={`/artists/G`}>G</Link></li>
+                    <li><Link to={`/artists/H`}>H</Link></li>
+                    <li><Link to={`/artists/I`}>I</Link></li>
+                    <li><Link to={`/artists/J`}>J</Link></li>
+                    <li><Link to={`/artists/K`}>K</Link></li>
+                    <li><Link to={`/artists/L`}>L</Link></li>
+                    <li><Link to={`/artists/M`}>M</Link></li>
+                    <li><Link to={`/artists/N`}>N</Link></li>
+                    <li><Link to={`/artists/O`}>O</Link></li>
+                    <li><Link to={`/artists/P`}>P</Link></li>
+                    <li><Link to={`/artists/Q`}>Q</Link></li>
+                    <li><Link to={`/artists/R`}>R</Link></li>
+                    <li><Link to={`/artists/S`}>S</Link></li>
+                    <li><Link to={`/artists/T`}>T</Link></li>
+                    <li><Link to={`/artists/U`}>U</Link></li>
+                    <li><Link to={`/artists/V`}>V</Link></li>
+                    <li><Link to={`/artists/W`}>W</Link></li>
+                    <li><Link to={`/artists/X`}>X</Link></li>
+                    <li><Link to={`/artists/Y`}>Y</Link></li>
+                    <li><Link to={`/artists/Z`}>Z</Link></li>
                 </div>
             </ul>
         </footer>

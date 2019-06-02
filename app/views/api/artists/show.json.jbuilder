@@ -9,4 +9,3 @@ json.set! @artist.id do
         end
     end     
 end 
-# need to do a json array x

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 import ArtistIndex from './artist_index';
 import {fetchArtists} from '../../actions/artist_actions';

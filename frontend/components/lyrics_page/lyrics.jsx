@@ -58,11 +58,6 @@ class Lyrics extends React.Component {
 
     const songLyrics = splitLyrics(this.props.song.lyrics);
     
-    // console.log(songLyrics);
-    // want to check the check annoations and their id's 
-    // want to match the index of the row with the annotations being passed in 
-
-    // for now pass in from the pojo 
     const lyricRows = songLyrics.map((lyrics, index) => {
         return (
           <LyricRow key={index}
@@ -75,11 +70,6 @@ class Lyrics extends React.Component {
     });
 
 
-    // want to pass in annotation the the lyric row 
-      // in the lyric row want to create a link over the row that 
-      // dispatches to the annoations link page
-      //  musst highlihght either grey or yellow -
-      // first highlighy grey with the links to the current asssociation
     let annotationsBlock = this.props.song.annotations.map(annotation => {
       return (
         <p> {annotation.body} </p>

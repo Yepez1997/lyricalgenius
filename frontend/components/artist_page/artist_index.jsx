@@ -19,9 +19,9 @@ class ArtistIndex extends React.Component {
         if (!this.props.artists) {
             return null;
         }
+       
         const artist = this.props.artists.map((artist) => {
             return (
-                
                 <Link to={`/artists/${artist.id}`}>
                 <li key={artist.id} className="artist-name" key={artist.id}> {artist.name} </li>
                 </Link>
