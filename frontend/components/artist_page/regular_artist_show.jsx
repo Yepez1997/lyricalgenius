@@ -2,6 +2,7 @@ import React from "react";
 import HeaderMainNavContainer from "../home_page/header_main_nav_container";
 import HeaderInfoNav from "../home_page/header_info_nav";
 import Modal from "../modal/modal";
+import ArtistsFooterNav from "../home_page/artists_footer_nav";
 
 class RegularArtistShow extends React.Component {
     constructor(props) {
@@ -36,6 +37,7 @@ class RegularArtistShow extends React.Component {
             </div>
           </div>
         </div>
+        <ArtistsFooterNav/>
       </>
     );
     }
