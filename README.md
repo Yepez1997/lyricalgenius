@@ -29,7 +29,7 @@ Lyrical Genius supports the current features
 ### Lyrics Page
 ![Lyrics Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%2011.15.36%20AM.png)
 ### Artist Page
-![Artists Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/artists-page.png)
+![Artists Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-06-03%20at%2011.45.53%20AM.png)
 ### All Artists Page
 ![All Artists Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/artists-page.png)
 ### All Songs Page
