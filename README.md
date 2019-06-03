@@ -23,14 +23,6 @@ Lyrical Genius supports the current features
     
 ## Code Snippets (Search)
 '''
-    const filteredSongs = this.state.filtered_song.map((item, index) => {
-                // want to find song id 
-                let song = this.findSongId(item);
-                return (
-                        index < 4 ? (<li className="filtered" key={item}><img className="search-img" src={song.photo}></img><Link to={`/songs/${song.id}`}>{item}</Link></li>) : " " 
-                        
-                )});
-
     let h1filteredSongs = filteredSongs.length > 0 ?  <h1 className="search-info"> Songs </h1> : " ";
     let h1filteredArtists = filteredArtists.length > 0 ?  <h1 className="search-info"> Artists </h1> : " ";
     let search = " ";
