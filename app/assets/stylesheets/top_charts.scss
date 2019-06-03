@@ -52,6 +52,9 @@
     height: 36px;
 }
 
+
+
+
 // .songInfo:nth-child(1) > li:nth-child(2) { 
 //     border-top: .15rem solid #000
 // }
@@ -64,10 +67,6 @@
 // .songInfo > li:hover {
 //     background-color: red;
 // }
-
-.li > .songInfo-number:nth-child(-n+5) {
-    background-color: red;
-}
 
 
 .songInfo-name {
@@ -104,5 +103,31 @@ li > img {
     bottom: 0;
     width: 100%;
     height: 5%;
+
+}
+
+.align-center-home {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.top-charts-title {
+   margin: 4% 20%;
+   font-family: Programme, sans-serif;
+   font-size: 34px;
+   display: block;
+   font-weight: 700px;
+   padding: 5px;
+
+}
+
+.all-charts-title {
+   margin: 4% 20%;
+   font-family: Programme, sans-serif;
+   font-size: 34px;
+   display: block;
+   font-weight: 700px;
+   padding: 5px;
 
 }

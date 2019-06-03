@@ -37,7 +37,10 @@ class AllSongs extends React.Component {
         <>
         <HeaderMainNavContainer/>   
         <HeaderInfoNav/>
-        <div className="songInfo-box">{songs}</div>;
+        <div className="align-center-home">
+          <h1 className="all-charts-title"> All Songs</h1>
+          <div className="songInfo-box">{songs}</div>;
+        </div>
         <div className="tempFooter"> 
             <p> TEMP </p>
         </div>
