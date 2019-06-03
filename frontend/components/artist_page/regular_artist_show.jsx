@@ -22,18 +22,19 @@ class RegularArtistShow extends React.Component {
           return null;
         }
       
-      const songs = this.props.artist.songs.map((song) => {
-        debugger 
-          return (
-            <Link to={`/songs/${song.id}`}>
-              <ul className="songInfo-a" key={song.id}>
-                <li className="songInfo-imagea-a"> <img src={song.photo} /> </li>
-                <li className="songInfo-name-a">
-                  <span className="songInfo-title-a">{song.title}</span>
-                </li>
-              </ul>
-            </Link>
-          );
+      const songs = this.props.artist.songs.map((song, index) => {
+        if (index < 5) {
+            return (
+              <Link to={`/songs/${song.id}`}>
+                <ul className="songInfo-a" key={song.id}>
+                  <li className="songInfo-imagea-a"> <img src={song.photo} /> </li>
+                  <li className="songInfo-name-a">
+                    <span className="songInfo-title-a">{song.title}</span>
+                  </li>
+                </ul>
+              </Link>
+            );
+          }
       })
     return (
       <>
