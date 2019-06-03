@@ -22,7 +22,7 @@ Lyrical Genius supports the current features
     - Renders all artists
     
 ## Code Snippets (Search)
-Life cycle methods in Search. Component did mount is critical to retrieve all the songs and artists to filter through. Component will receive props was neccesary in order to update the state; based on the props that are fetched from the database
+Life cycle methods in Search. ComponentDidMount() is critical to retrieve all the songs and artists to filter through.  ComponentWillReceiveProps(nextProps) was neccesary in order to update the state - based on the props given.
 ```
   componentDidMount() {
     this.props.fetchArtists();
@@ -37,7 +37,7 @@ Life cycle methods in Search. Component did mount is critical to retrieve all th
     }
 ```
 
-Handles all the changes for the filtered songs. 
+Handled all the changes for the filtered songs. 
 ```
   handleChange(event) {
     this.setState({ val: event.target.value });  
@@ -70,7 +70,7 @@ Handles all the changes for the filtered songs.
 
 ```
 
-Rendered specific songs or artists with search ! Could have rendered one or the other, but I had to make sure either the artists or the songs search label would be null in the drop down before rendering the search bar.  
+Rendered specific songs or artists with search ! Could have rendered one or the other, but I had to make sure either a artist's or a song's search label would be null in the drop down before rendering the search bar.  
 ```
      const filteredArtists = this.state.filtered_artist.map((item, index) => {
            let artist = this.findArtistId(item);
