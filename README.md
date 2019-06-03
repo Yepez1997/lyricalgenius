@@ -21,7 +21,35 @@ Lyrical Genius supports the current features
   * All Artists Page
     - Renders all artists
     
-## Code Snippets 
+## Code Snippets (Search)
+'''
+    const filteredArtists = this.state.filtered_artist.map((item, index) => {
+           let artist = this.findArtistId(item);
+           return (
+                    index < 4 ? (<li className="filtered" key={item}><img className="search-img-artist" src={artist.photo}></img><Link to={`/artists/${artist.id}`}>{item}</Link></li>) : " "      
+                )});
+
+    const filteredSongs = this.state.filtered_song.map((item, index) => {
+                // want to find song id 
+                let song = this.findSongId(item);
+                return (
+                        index < 4 ? (<li className="filtered" key={item}><img className="search-img" src={song.photo}></img><Link to={`/songs/${song.id}`}>{item}</Link></li>) : " " 
+                        
+                )});
+
+    let h1filteredSongs = filteredSongs.length > 0 ?  <h1 className="search-info"> Songs </h1> : " ";
+    let h1filteredArtists = filteredArtists.length > 0 ?  <h1 className="search-info"> Artists </h1> : " ";
+    let search = " ";
+    if (this.state.val != 0) {
+        search = <ul className="search">
+           <h1 className="search-header"> Search Results </h1>
+           {h1filteredSongs}
+           {filteredSongs}
+           {h1filteredArtists}
+           {filteredArtists}
+         </ul>;
+    }
+'''
 
 
 ## Core Functionality (In Depth)
