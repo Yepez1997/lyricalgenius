@@ -16,6 +16,10 @@ Lyrical Genius supports the current features
     - Signed in users are able to make annotations on a song
   * Lyrics Page
     - The proper lyrics for a song are displayed and rendered into rows of Components
+  * Artists Page 
+    - Shows an artist's most popular songs 
+  * All Artists Page
+    - Renders all artists
 
 ## Core Functionality (In Depth)
  ### HomePage
@@ -24,7 +28,12 @@ Lyrical Genius supports the current features
 ![Search Bar](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%209.51.23%20AM.png)
 ### Lyrics Page
 ![Lyrics Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/Screen%20Shot%202019-05-10%20at%2011.15.36%20AM.png)
-
+### Artist Page
+![Artists Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/artists-page.png)
+### All Artists Page
+![All Artists Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/artists-page.png)
+### All Songs Page
+![All Songs Page](https://github.com/Yepez1997/lyricalgenius/blob/master/embeded_images/all-songs.png)
 
 ## Technologies 
-LyricaLl Genius was built with the following technologies: React JS (frontend), Ruby on Rails (backend), Postgres (backend database), and Amazon Web Services (image storage), 
+Lyrical Genius was built with the following technologies: React JS (frontend), Ruby on Rails (backend), Postgres (backend database), and Amazon Web Services (image storage), 
