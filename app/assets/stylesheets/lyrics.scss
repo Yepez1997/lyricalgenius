@@ -193,10 +193,10 @@
     position: absolute;
     object-fit: contain;
     //max-height: 25%;
-    height: 220px;
+    height: 270px;
     margin-top: 5%;
-    top: -20%;
-    left: 20%;
+    top: -10%;
+    left: 13%;
     border: 4px solid #0ecb27;
     border-radius: 100%;
 }
@@ -219,4 +219,20 @@
     height: 280px;
     max-height: 20%;
     width: 100%
+}
+
+.artist-container > h1{
+    margin-left: 19%; 
+    font-size: 1.5rem;
+    margin-top: 5%;
+    font-weight: 700;
+    font-family: Programme,sans-serif;
+}
+
+.popular-songs {
+    float: right;
+    margin-right: 15%;
+    font-family: Programme,sans-serif;
+    color: #9a9a9a;
+    font-weight: 700;
 }
