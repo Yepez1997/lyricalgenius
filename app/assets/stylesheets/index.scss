@@ -144,7 +144,7 @@ small {
 /*  footers  */
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     font-family: Programme, sans-serif;
@@ -162,6 +162,7 @@ small {
 .footer-links {
     display: flex;
     justify-content: center;
+    //position: relative;
     // max-height: 10%;
     // position: absolute;
 }
