@@ -16,8 +16,6 @@ class SearchBar extends React.Component {
 
 
   componentDidMount() {
-    //this.props.fetchSongs;
-    // fetch the artists and convert them to their names only
     this.props.fetchArtists();
     this.props.fetchSongs();
   }
