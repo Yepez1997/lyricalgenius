@@ -18,16 +18,8 @@ class AnnotationForm extends React.Component {
         }
     }
 
-    //TODO: add a component did upadate 
-    // add 
     handleCancel() {
-        // make a dispatch to remove all links in the state
-        // want to change the color back
-        // this.props.links.forEach((link) => {
-        //     document.getElementById(link).style.backgroundColor = "white";
-        // })
         this.props.removeLinks();
-        // push to history slice 
         this.props.history.push(`/songs/${this.state.song_id}`);
 
     }
@@ -43,7 +35,6 @@ class AnnotationForm extends React.Component {
                   annotation_id: annotation.annotation.annotation_id
                 });
             });
-            // once the links are done push to the link
             this.props.history.push(`/annotations/${annotation.annotation.annotation_id}`)
         });
         this.setState({
@@ -53,9 +44,7 @@ class AnnotationForm extends React.Component {
     }
 
     render() {
-    
-        // FIXME: add onchange handlers to cancel 
-        return(
+            return(
             <div className="form">
                 <div className="form-body">
                     <textarea onChange={this.update('body')}

@@ -8,7 +8,6 @@ class TopCharts extends React.Component {
     }
     
     componentDidMount() {
-      // can i set a constraint here to retreive fewer songs 
       this.props.fetchSongs();
     }
 

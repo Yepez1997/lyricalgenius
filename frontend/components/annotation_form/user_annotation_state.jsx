@@ -1,7 +1,6 @@
 import React from 'react';
 import AnnotationFormContainer from './annotation_form_container';
 
-
 const UserAnnotationState = (props) => {
     const annotationLinks = () => (
         props.links.length > 0 ?  <AnnotationFormContainer/>  : <h1> </h1>

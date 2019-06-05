@@ -32,7 +32,6 @@ class ArtistShow extends React.Component {
             }
         }
         if (isArtistLetter) {
-            //return <AristLetterShow letter={this.state.letter}/>
             return <ArtistLetterShowContainer letter={this.state.letter}/>
         } else {
             return <RegularArtistShow artists={this.props.artist}/>

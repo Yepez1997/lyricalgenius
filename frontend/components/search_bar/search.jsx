@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    // filtered should be a combo of both artist and songs
     this.state = {
         val: "",
         filtered_song: [],

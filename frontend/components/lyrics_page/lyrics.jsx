@@ -3,12 +3,9 @@ import ReactDOM from 'react-dom';
 import HeaderMainNavContainer from "../home_page/header_main_nav_container";
 import HeaderInfoNav from "../home_page/header_info_nav";
 import Modal from '../modal/modal';
-// import AnnotationFormContainer from '../annotation_form/annotation_form_container';
 import UserAnnotationContainer from "../annotation_form/user_annotation_state_container";
 import LyricRow from "./lyric_row";
 
-// get this.props.match.params.songId
-// request this information 
 
 class Lyrics extends React.Component {
   
@@ -25,7 +22,6 @@ class Lyrics extends React.Component {
 
 
   render() {
-    // why do we check this 
     if (!this.props.song) {
         return null;
     }

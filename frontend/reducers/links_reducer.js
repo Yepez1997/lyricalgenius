@@ -1,7 +1,7 @@
 import merge from "lodash/merge";
 import { RECEIVE_LINK, REMOVE_LINK, RECEIVE_LINKS, REMOVE_LINKS } from "../actions/links_actions";
 
-// may also want to have a remove links 
+
 const linksReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
@@ -14,7 +14,6 @@ const linksReducer = (state = {}, action) => {
             delete newState[action.link_id];
             return newState;
         case REMOVE_LINKS:
-            // FIXME: actually delete the items
             return merge({}, {});
         default: 
             return state;

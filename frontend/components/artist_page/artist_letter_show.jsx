@@ -15,8 +15,6 @@ class ArtistLetterShow extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.artistId !== prevProps.match.params.artistId ) {
-          // this.props.
-          //this.props.history.push(`/artists/${this.props.letter}`)
           this.props.fetchArtists();
           this.setState({filteredArtists: []})
         }
@@ -28,7 +26,6 @@ class ArtistLetterShow extends React.Component {
 
     filterArtists(artists) {
         let filtered = [];
-        //console.log(artists)
         if (!artists) {
             return null;
         }

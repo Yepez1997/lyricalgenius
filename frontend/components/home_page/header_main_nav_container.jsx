@@ -8,7 +8,6 @@ const mapStateToProps = ({ session }) => ({
     currentUser: session.currentUser
 });
 
-// invoke actions here 
 const mapDispatchToProps = dispatch => {
    return {modal: (type) => dispatch(openModal(type)),
     logout: () => dispatch(logout()) };
