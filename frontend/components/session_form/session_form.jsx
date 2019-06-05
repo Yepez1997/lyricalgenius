@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.signInDemo = this.signInDemo.bind(this);
   }
 
   update(field) {
@@ -22,11 +23,14 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(() => this.props.closeModal());
-    // if not sucess do not close modal 
-    // this.props.closeModal();
   }
- // want to clear errors here ? 
- // add styling
+
+  signInDemo() {
+    this.setState({username:"demo", password:"password"})
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user).then(() => this.props.closeModal());
+  }
+
   renderErrors() {
     return (
       <ul className="render-errors">
@@ -37,16 +41,19 @@ class SessionForm extends React.Component {
     );
   }
 
-  //Please {this.props.formType} or {this.props.navLink}
-  // signin
-  // only want to render errors if 
   render() {
     let capitalizeFormType;
+    let demoButton; 
     if (this.props.formType === "login")  {
       capitalizeFormType = this.props.formType[0].toUpperCase() + this.props.formType.slice(1);
+      demoButton =  <button className="session-submit" onClick={this.signInDemo}>
+                {" "}
+                Demo User{" "}
+              </button>
     } 
     else {
       capitalizeFormType = this.props.formType[0].toUpperCase() + this.props.formType.slice(1,4) + " " + this.props.formType.slice(4)
+      demoButton = ""
     } 
     return (
       <div className="login-form-container">
@@ -60,7 +67,7 @@ class SessionForm extends React.Component {
                 Welcome to Lyrical Genius{" "}
               </span>
             </div>
-            <br/>
+            <br />
             {this.renderErrors()}
             <br />
             <label>
@@ -83,11 +90,14 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input
-              className="session-submit"
-              type="submit"
-              value={capitalizeFormType}
-            />
+            <div className="inputs-box">
+              <input
+                className="session-submit"
+                type="submit"
+                value={capitalizeFormType}
+              />
+              {demoButton}
+            </div>
           </div>
         </form>
       </div>

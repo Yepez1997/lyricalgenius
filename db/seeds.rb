@@ -13,6 +13,8 @@ require 'open-uri'
     # Users    
     user1 = User.create!({username: "panda123", password:  "password"})
     user2 = User.create!({username: "yepez2020", password: "password"})
+    user3 = User.create!({username: "demo", password: "password"})
+
 
     kids_see_ghost_song_file = open('https://seed-lyrical-genius.s3-us-west-1.amazonaws.com/kids_see_ghosts.jpg')
     scorpion_file_item = open('https://seed-lyrical-genius.s3-us-west-1.amazonaws.com/scorpion.jpg')

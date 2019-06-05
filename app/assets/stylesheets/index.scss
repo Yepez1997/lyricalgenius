@@ -300,6 +300,11 @@ ul>li {
 .filtered {
     display: flex;
     flex-direction: row;
-
  
+}
+
+.inputs-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }
