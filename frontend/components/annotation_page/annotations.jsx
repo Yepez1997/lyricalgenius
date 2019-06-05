@@ -9,6 +9,7 @@ import UserAnnotationContainer from "../annotation_form/user_annotation_state_co
 import LyricRow from "../lyrics_page/lyric_row";
 import AnnotationRow from "./annotation_row";
 
+
 class Annotations extends React.Component {
 
     constructor(props) {
@@ -28,6 +29,7 @@ class Annotations extends React.Component {
         this.props.fetchAnnotation(this.props.match.params.annotationId).then((payload) => {
             this.props.fetchSong(payload.annotation.song_id)
         });
+        this.props.removeLinks();
     }
 
     render() {
@@ -95,34 +97,49 @@ class Annotations extends React.Component {
       let rowChosen = this.props.annotation.body.split(' ').length < 8 ? <p className="annotation-body-alternative"> {this.props.annotation.body} </p> : annotationBodyRow;
       return (
         <>
-        <Modal/>
-        <HeaderMainNavContainer />
-        <HeaderInfoNav /> 
-        <div className="artist-header"> 
-            <img src={this.props.song.photo}/>
+          <Modal />
+          <HeaderMainNavContainer />
+          <HeaderInfoNav />
+          <div className="artist-header">
+            <img src={this.props.song.photo} />
             <div className="artist-container">
-              <div className="album-image"> 
+              <div className="album-image">
                 <img src={this.props.song.photo} />
               </div>
-              <div className="album-info"> 
-                  <h1 className="album-info-title"> {this.props.song.title}</h1>
-                  <h1 className="album-info-artist"> {this.props.song.artist}</h1>
-                  <h1 className="album-info-album"> Album {this.props.song.album}</h1>
+              <div className="album-info">
+                <h1 className="album-info-title">
+                  {" "}
+                  {this.props.song.title}
+                </h1>
+                <h1 className="album-info-artist">
+                  {" "}
+                  {this.props.song.artist}
+                </h1>
+                <h1 className="album-info-album">
+                  {" "}
+                  Album {this.props.song.album}
+                </h1>
               </div>
             </div>
-        </div>
-        <div className="main-section">
-            <div className="song-lyrics-body"> 
+          </div>
+          <div className="main-section">
+            <div className="song-lyrics-body">
               <h1 id="song-title"> {this.props.song.title} LYRICS</h1>
-                {lyricRows}
+              {lyricRows}
             </div>
             <div className="comment-column-layout">
-              <h1 className="annotation-contributor"> Contributor: {this.props.annotation.author} </h1>
+              <h1 className="annotation-contributor">
+                {" "}
+                Contributor: {this.props.annotation.author}{" "}
+              </h1>
               {rowChosen}
+              <div className="comment-column-layout2">
+                <UserAnnotationContainer />
+              </div>
             </div>
-        </div>
+          </div>
         </>
-        );
+      );
     }
 }
 
