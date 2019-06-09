@@ -66,7 +66,6 @@ class AnnotationForm extends React.Component {
     if (!this.props.currAnnotation) {
       return;
     }
-        
     return (
       <div className="form">
         <div className="form-body">

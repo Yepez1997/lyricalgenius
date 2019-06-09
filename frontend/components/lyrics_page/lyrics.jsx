@@ -74,31 +74,39 @@ class Lyrics extends React.Component {
 
     return (
       <>
-        <Modal/>
+        <Modal />
         <HeaderMainNavContainer />
-        <HeaderInfoNav /> 
-        <div className="artist-header"> 
-            <img src={this.props.song.photo}/>
-            <div className="artist-container">
-              <div className="album-image"> 
-                <img src={this.props.song.photo} />
-              </div>
-              <div className="album-info"> 
-                  <h1 className="album-info-title"> {this.props.song.title}</h1>
-                  <h1 className="album-info-artist"> {this.props.song.artist}</h1>
-                  <h1 className="album-info-album"> Album {this.props.song.album}</h1>
+        <HeaderInfoNav />
+        <div className="artist-header">
+          <img src={this.props.song.photo} />
+          <div className="artist-container">
+            
+              <img src={this.props.song.photo} />
+              <div className="info-artists">
+                <span className="album-info-title"> {this.props.song.title}</span>
+                <span className="album-info-artist">
+               
+                  {this.props.song.artist}
+                </span>
+                <span className="album-info-album">
+  
+                  Album {this.props.song.album}
+                </span>
               </div>
             </div>
         </div>
         <div className="main-section">
-            <div className="song-lyrics-body"> 
-              <h1 id="song-title"> {this.props.song.title} LYRICS</h1>
-                {lyricRows}
-            </div>
-            <div className="comment-column-layout">
-                <UserAnnotationContainer/>
-                {annotationsBlock}
-            </div>
+          <div className="song-lyrics-body">
+            <h1 id="song-title"> {this.props.song.title} LYRICS</h1>
+            {lyricRows}
+          </div>
+          <div className="comment-column-layout">
+            <UserAnnotationContainer />
+            {annotationsBlock}
+          </div>
+        </div>
+        <div className="tempFooter">
+          <p> TEMP </p>
         </div>
       </>
     );

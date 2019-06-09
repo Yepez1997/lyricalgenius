@@ -8,6 +8,8 @@ import { removeLinks } from '../../actions/links_actions';
 import { fetchAnnotation } from "../../actions/annotation_actions";
 
 
+
+
 const mapStateToProps = (state) => {
     const annotation = {body: "", song_id: ""};
     return {annotation,
