@@ -43,7 +43,7 @@ class RegularArtistShow extends React.Component {
         <HeaderInfoNav />
         <div className="artist-header-artists">
           <img src={this.props.artist.photo} />
-          <div className="artist-container">
+          <div className="artist-container-2">
             <div className="album-image-artist">
               <img src={this.props.artist.photo} />
             </div>
