@@ -13,7 +13,7 @@ class TopCharts extends React.Component {
 
     render() {
         const songs = this.props.songs.map((song, index) => {
-          if (index < 4) {
+          if (index < 5) {
             let verified = song.artist_verified ? '✅' : " ";
             return (
               <Link to={`/songs/${song.id}`}>
