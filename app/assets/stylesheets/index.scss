@@ -322,6 +322,8 @@ ul>li {
 .news-bar {
     color: black;
     display: flex;
+    justify-content: flex-start;
+    
 }
 
 .news-bar > span::after {
@@ -335,6 +337,26 @@ ul>li {
 
 .header-news-title {
     font-family: Programme, sans-serif;
-    font-weight: 700px;
-    font-size: 2.25rem;
+    font-weight: 600px;
+    font-size: 1.75rem;
+}
+
+// .header-news > h2 {
+//   font-family: Programme, sans-serif;
+//   font-size: 1.25rem;
+//   font-weight: 500px;
+// }
+
+.header-news > h6 {
+  font-family: Programme, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300px;
+}
+
+
+.border-span {
+    border-top: 0.15rem solid black;
+    width: 90%;
+    padding-left: 10px;
+    align-self: center
 }
