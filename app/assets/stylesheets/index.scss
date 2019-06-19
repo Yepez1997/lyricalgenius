@@ -308,7 +308,7 @@ ul>li {
 .header-news {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 40px;
     margin: 0% 20%;
 }
 
@@ -338,7 +338,7 @@ ul>li {
 .header-news-title {
     font-family: Programme, sans-serif;
     font-weight: 600px;
-    font-size: 1.75rem;
+    font-size: 2.00rem;
 }
 
 // .header-news > h2 {
@@ -357,6 +357,15 @@ ul>li {
 .border-span {
     border-top: 0.15rem solid black;
     width: 90%;
-    padding-left: 10px;
+    margin: 10px;
     align-self: center
+}
+
+.news-author {
+      font-weight: 200px;
+       font-size: 1.0rem;
+}
+
+.header-news > a:hover {
+    color: #ffff64;
 }
