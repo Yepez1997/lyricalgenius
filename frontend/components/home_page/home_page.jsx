@@ -12,7 +12,11 @@ const HomePage = () => (
       <HeaderMainNavContainter />
       <HeaderInfoNav />
       <div className="header-news">
-        <h1> TEXT </h1>
+        <div className="header-news-title">
+          <h1> TEXT </h1>
+          <h1> TEXT </h1>
+          <h1> TEXT </h1>
+        </div>
         <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2018%2F03%2Fdj-khaled-father-of-asahd-video-letter-0.jpg?w=960&cbr=1&q=90&fit=max" />
       </div>
       <TopChartsContainer />
