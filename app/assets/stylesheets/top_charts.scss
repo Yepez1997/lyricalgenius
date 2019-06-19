@@ -1,8 +1,8 @@
 .songInfo-box {
-    position: absolute;
+    position: relative;
     top: 14%;
     width: 60%;
-    margin: 5% 20%;
+    margin: 0% 20%;
     font-family: Programme, sans-serif;
     border-top: solid .15rem #000;
 }
@@ -113,17 +113,18 @@ li > img {
 }
 
 .top-charts-title {
-   margin: 4% 20%;
+//    margin: 4% 20%;
    font-family: Programme, sans-serif;
    font-size: 34px;
    display: block;
+   align-self: center;
    font-weight: 700px;
    padding: 5px;
 
 }
 
 .all-charts-title {
-   margin: 4% 20%;
+   margin: 0% 20%;
    font-family: Programme, sans-serif;
    font-size: 34px;
    display: block;
