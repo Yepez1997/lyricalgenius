@@ -11,6 +11,7 @@ const ArtistsFooterNav = () => (
             </Link>
           </div>
           <div className="all-artists">
+            
             <span> All Artists </span>
           </div>
           <div className="artist-letters">
