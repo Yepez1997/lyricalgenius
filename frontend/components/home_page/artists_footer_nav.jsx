@@ -3,13 +3,6 @@ import {Link} from 'react-router-dom';
 const ArtistsFooterNav = () => (
   <>
     <footer className="footer">
-      <footer className="footer-info">
-        <ul className="footer-links">
-          <li>
-            <a href="https://github.com/Yepez1997">Github Repo</a>
-          </li>
-        </ul>
-      </footer>
       <footer className="artists-footer">
         <ul className="footer-artist-links">
           <div className="verified-artist">
