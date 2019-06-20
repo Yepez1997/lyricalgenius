@@ -6,8 +6,6 @@ import { receiveLink } from "../../actions/links_actions";
 import { removeLink } from "../../actions/links_actions";
 import { removeLinks } from "../../actions/links_actions";
 
-// want to fetch the current annotation 
-// and link to its llink
 
 const mapStateToProps = (state, ownParams) => {
   const annotation =
@@ -22,7 +20,6 @@ const mapStateToProps = (state, ownParams) => {
   return { annotation, song, currentUser}
 };
 
-// 
 const mapDispatchToProps = dispatch => ({
   fetchAnnotation: id => dispatch(fetchAnnotation(id)),
   fetchAnnotations: () => dispatch(fetchAnnotations),
