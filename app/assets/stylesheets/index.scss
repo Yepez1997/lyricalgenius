@@ -308,6 +308,7 @@ ul>li {
 .header-news {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
     margin: 0% 6%;
 }
 
@@ -348,7 +349,7 @@ ul>li {
 
 .header-news > h6 {
   font-family: Programme, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.00rem;
   font-weight: 300px;
 }
 
@@ -362,13 +363,9 @@ ul>li {
 
 .news-author {
       font-weight: 200px;
-       font-size: 1.0rem;
+       font-size: 1.00rem;
 }
 
 .header-news > a:hover {
     color: #ffff64;
-}
-
-.h6-margin {
-    margin: 5px;
 }
