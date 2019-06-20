@@ -34,7 +34,7 @@ class TopCharts extends React.Component {
         return (
 
           <div className="align-center-home"> 
-            <h1 className="top-charts-title"> Top Songs</h1>
+            <h1 className="top-charts-title"> Charts </h1>
             <div className="songInfo-box">
               {songs}
             </div>
