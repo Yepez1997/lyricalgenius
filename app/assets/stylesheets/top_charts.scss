@@ -12,11 +12,10 @@
     border-bottom: black;
     justify-content: center;
     align-items: center;
-    border-bottom: solid 1px #ccc;
     padding: 0 1rem;
     box-sizing: border-box;
     //FIXME: incase breaks 
-    height: 60px;
+    height: 65px;
 }
 
 .songInfo:hover {
@@ -55,8 +54,8 @@
 
 li > img {
     margin-top: -11px;
-    height: 60px;
-    width: 60px;
+    height: 65px;
+    width: 65px;
     margin-bottom: -14px;
 }
 
